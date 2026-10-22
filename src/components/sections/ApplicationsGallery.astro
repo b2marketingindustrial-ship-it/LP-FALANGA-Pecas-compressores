@@ -10,8 +10,8 @@
  * `aplicacoes-atendimento` da faixa e a descrição até 100 caracteres
  * (scripts/lib/contract.mjs).
  *
- * A moldura é 16:10 com a foto centrada. Nesta LP as quatro fotos são recortes da arte do
- * sistema de ar Schulz do site do cliente, já sem os números da legenda.
+ * A moldura é 4:3, a proporção nativa das fotos desta LP (1200×900): a foto entra
+ * inteira, sem corte.
  *
  * ATENÇÃO: `npm run compose` recopia o componente da biblioteca e desfaz esta variante.
  * Recompor a página exige reaplicá-la a partir do git.
@@ -50,7 +50,10 @@ const { tone, rhythm } = Astro.props
           data-cta={`aplicacoes-${app.id}`}
           class="btn-slave-whats group flex h-full w-full flex-col overflow-hidden rounded-2xl bg-neutral-light text-left shadow-[0_18px_40px_-28px_rgba(0,33,71,0.45)] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_28px_56px_-28px_rgba(0,33,71,0.5)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
         >
-          <span class="relative block aspect-[16/10] overflow-hidden bg-neutral-gray-100">
+          {/* 4:3, a proporção nativa das fotos (1200×900): a moldura mostra a foto
+              inteira, sem corte. Era 16:10, herdado de quando as fotos eram recortes
+              da arte do site. */}
+          <span class="relative block aspect-[4/3] overflow-hidden bg-neutral-gray-100">
             <Image
               src={app.photo.src}
               alt={app.photo.alt}
@@ -74,7 +77,7 @@ const { tone, rhythm } = Astro.props
             </span>
             <span class="mt-auto flex items-center justify-between gap-3 border-t border-[#e3e8f1] pt-4">
               <span class="font-sans text-[15px] font-bold text-brand-blue">{cta.card}</span>
-              <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#eaf2fb] text-brand-blue-dark transition-colors duration-200 group-hover:bg-brand-blue group-hover:text-neutral-light motion-reduce:transition-none">
+              <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-dark text-neutral-light transition-colors duration-200 group-hover:bg-brand-blue motion-reduce:transition-none">
                 <Icon name="arrow-right" class="size-4 [stroke-width:2.2]" />
               </span>
             </span>

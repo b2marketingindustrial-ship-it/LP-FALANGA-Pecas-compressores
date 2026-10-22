@@ -1,6 +1,6 @@
 {
   "ficha": 1,
-  "gerado": "2026-10-22T15:18:04.072Z",
+  "gerado": "2026-10-22T17:56:55.926Z",
   "origem": "docs/FICHA-LP.md",
   "padrao": "2.8.0",
   "cliente": "Falanga Pneumática",
@@ -495,8 +495,7 @@
   },
   "assets": {
     "pendentes": [
-      "vitrine",
-      "aplicacoes"
+      "vitrine"
     ]
   },
   "fora": {

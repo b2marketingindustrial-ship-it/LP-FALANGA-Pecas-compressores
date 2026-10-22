@@ -374,7 +374,7 @@ blocos:
     falta: o material não fala em consolidar a compra de vários itens num pedido só, nem traz a foto de composição
 
 assets:
-  pendentes: [vitrine, aplicacoes]
+  pendentes: [vitrine]
 
 conflitos:
   - pede: '"Entre em contato conosco" e "Faça um Orçamento Já!" como CTA'
