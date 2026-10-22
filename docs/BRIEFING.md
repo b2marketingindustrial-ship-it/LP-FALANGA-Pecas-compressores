@@ -176,3 +176,11 @@ Registrados para corrigir no starter (não foram corrigidos dentro da LP, exceto
 - [ ] Todos os assets reais entregues
 - [ ] `npm run verify` passa inteiro em: `____/____/______`
 - [x] Padrão B2 versão: `2.8.0`
+
+## Publicação
+
+| Onde      | Endereço                                                       | Observação                                                                                                  |
+| --------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| GitHub    | https://github.com/harpyacessory-ux/lp-pe-as-para-compressores | branch `main`; o workflow `build-wp.yml` só publica em `wp-build` quando o `check:lp` estrito passar        |
+| Vercel    | https://lp-pe-as-para-compressores.vercel.app                  | projeto `lp-pe-as-para-compressores`, ligado ao repositório: cada push em `main` gera um deploy de produção |
+| URL final | https://falangapneumatica.com.br/pecas-para-compressores/      | é a `site.url` (canonical e og:url); a URL da Vercel é de revisão                                           |
