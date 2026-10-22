@@ -134,7 +134,7 @@ A biblioteca não fica ao lado desta pasta, então o caminho foi passado com `--
 
 | Asset                       | Arquivo esperado                                            | Especificação                                                      | Status                                                                                                 |
 | --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | 18 entregues (fotos da LP antiga) · **`produto-18.png` pendente** (Motor Oil Schulz)                   |
+| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | 19 entregues — 18 da LP antiga · `produto-18.png` (Motor Oil Schulz) enviada em 22/10/2026            |
 | Logos dos grupos da vitrine | `src/assets/vitrine/marca-*.png`                            | PNG 400×160                                                        | não usado — prateleiras com o nome do grupo                                                            |
 | 4 fotos das aplicações      | `src/assets/aplicacoes/aplicacao-1.png` … `aplicacao-4.png` | 1200×900 (4:3), equipamento em operação                            | **entregues** em 22/10/2026 — parafuso, pistão, reservatório, transmissão; ver a nota de origem abaixo |
 | Cenário dos diferenciais    | `src/assets/diferenciais/cenario.jpg`                       | 1600×900, bancada/cenário                                          | **entregue** — foto do cliente (1020×482), a mesma da LP irmã; vem do site, menor que a especificação  |
@@ -146,7 +146,7 @@ As fotos da vitrine saíram da LP antiga, uma por produto, na ordem em que a pá
 
 - A foto de "Filtros de Óleo / Separadores de Óleo e Ar" juntava três produtos: virou três recortes (`produto-2` filtros de óleo, `produto-3` elementos filtrantes, `produto-4` separadores).
 - `produto-11` (Sintético 8000 4 L) vinha com fundo cinza de estúdio, trocado por branco.
-- A LP antiga usa no Motor Oil Schulz a embalagem do MS LUB 1 L (rótulo: "para compressores alternativos de pistão"). A foto não foi usada: `produto-18` segue com o placeholder.
+- A LP antiga usa no Motor Oil Schulz a embalagem do MS LUB 1 L (rótulo: "para compressores alternativos de pistão"). Essa foto não foi usada; em 22/10/2026 entrou em `produto-18` a imagem enviada pelo usuário (o mesmo frasco de 1 L, com o detalhe do óleo entrando no cabeçote), aparada e centrada em 800×600 sobre branco.
 - Parte das fotos de lubrificante tem nome de arquivo de anúncio de marketplace (`D_NQ_NP_…`): confirmar com o cliente o direito de uso, ou pedir as originais.
 
 As imagens `a.png` a `g.png` da LP antiga são logos (Kärcher, Schulz, Wayne, Atlas Copco, Sullair, Ingersoll Rand, Chicago Pneumatic), não fotos de produto. Não entraram como imagem: logo de marca de terceiro exige autorização registrada. As marcas de compressor entraram por extenso no texto da vitrine.

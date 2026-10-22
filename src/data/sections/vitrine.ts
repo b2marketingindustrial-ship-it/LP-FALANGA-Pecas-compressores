@@ -11,8 +11,8 @@
  * traço amarelo e a área atendida (`area`), e faixa de CTA fechando a seção (`closing`).
  *
  * Fotos da LP antiga da Falanga (falangapneumatica.com.br/pecas-para-compressores/),
- * recortadas e centradas em 800×600. `produto-18.png` (Motor Oil Schulz) segue como
- * placeholder: a LP antiga usava ali a embalagem do MS LUB 1 L.
+ * recortadas e centradas em 800×600. `produto-18.png` (Motor Oil Schulz) veio do cliente
+ * em 22/10/2026: frasco de 1 L com o detalhe do óleo entrando no cabeçote.
  */
 import type { Photo } from '@data/types'
 
@@ -194,7 +194,10 @@ export const showcase = {
       group: 'lubrificantes',
       title: 'Motor Oil Schulz',
       description: '',
-      photo: { src: produto18, alt: 'Embalagem do Motor Oil Schulz' },
+      photo: {
+        src: produto18,
+        alt: 'Frasco de 1 L de óleo Schulz e óleo sendo despejado no cabeçote de um compressor',
+      },
     },
     {
       id: 'desengripante-sd-50',
