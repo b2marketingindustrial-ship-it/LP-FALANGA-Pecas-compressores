@@ -28,7 +28,7 @@ export const iconPaths = {
     '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8"/>',
   bolt: '<path d="M12.5 3 5 13.5h5.5L11 21l7.5-11H13l-.5-7Z"/>',
   droplet: '<path d="M12 3.5s6.5 7.2 6.5 11.5A6.5 6.5 0 0 1 5.5 15c0-4.3 6.5-11.5 6.5-11.5Z"/>',
-  gear: '<circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2.3M12 18.2v2.3M20.5 12h-2.3M5.8 12H3.5M17.8 6.2l-1.6 1.6M7.8 16.2l-1.6 1.6M17.8 17.8l-1.6-1.6M7.8 7.8 6.2 6.2"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M19.1 14.2a1.5 1.5 0 0 0 .3 1.7l.1.1a1.8 1.8 0 1 1-2.6 2.6l-.1-.1a1.5 1.5 0 0 0-1.7-.3 1.5 1.5 0 0 0-.9 1.4v.3a1.8 1.8 0 1 1-3.6 0v-.2a1.5 1.5 0 0 0-1-1.4 1.5 1.5 0 0 0-1.7.3l-.1.1a1.8 1.8 0 1 1-2.6-2.6l.1-.1a1.5 1.5 0 0 0 .3-1.7 1.5 1.5 0 0 0-1.4-.9h-.3a1.8 1.8 0 1 1 0-3.6h.2a1.5 1.5 0 0 0 1.4-1 1.5 1.5 0 0 0-.3-1.7l-.1-.1a1.8 1.8 0 1 1 2.6-2.6l.1.1a1.5 1.5 0 0 0 1.7.3h.1a1.5 1.5 0 0 0 .9-1.4v-.3a1.8 1.8 0 1 1 3.6 0v.2a1.5 1.5 0 0 0 .9 1.4 1.5 1.5 0 0 0 1.7-.3l.1-.1a1.8 1.8 0 1 1 2.6 2.6l-.1.1a1.5 1.5 0 0 0-.3 1.7v.1a1.5 1.5 0 0 0 1.4.9h.3a1.8 1.8 0 1 1 0 3.6h-.2a1.5 1.5 0 0 0-1.4.9Z"/>',
   move: '<path d="M3.5 12h17M6 8.5 3.5 12 6 15.5M18 8.5 20.5 12 18 15.5"/>',
   mountain: '<path d="m3.5 18.5 6-10 4 6.2 2-3 5 6.8Z"/><circle cx="16" cy="6.5" r="1.6"/>',
   grid: '<rect x="3.5" y="3.5" width="7" height="7" rx="0.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="0.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="0.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="0.6"/>',
@@ -47,6 +47,25 @@ export const iconPaths = {
     '<circle cx="5.5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18.5" cy="12" r="1.4"/>',
   wrench:
     '<path d="M14.7 6.3a4.5 4.5 0 0 0-6 5.3L3.5 16.8l3.2 3.2 5.2-5.2a4.5 4.5 0 0 0 5.3-6l-2.9 2.9-2.4-.6-.6-2.4 2.9-2.9Z"/>',
+  /** Chave inglesa e chave de fenda cruzadas: manutenção corretiva (mockup Falanga, 21/10/2026). */
+  tools:
+    '<path d="M14.5 3.6a4 4 0 0 0-4.6 5.3l-6 6a1.6 1.6 0 0 0 2.3 2.3l6-6a4 4 0 0 0 5.3-4.6l-2.5 2.5-2.3-.6-.6-2.3 2.4-2.6Z"/><path d="m4.3 3.3 2.4 1.2 1.2 2.4 6.6 6.6"/><path d="m14 14.6 1.8-1.8 4.6 4.6a1.3 1.3 0 0 1-1.8 1.8l-4.6-4.6Z"/>',
+  /** Técnico de capacete: assistência técnica (mockup Falanga, 21/10/2026). */
+  worker:
+    '<path d="M6.8 10.2a5.2 5.2 0 0 1 10.4 0"/><path d="M5.2 10.2h13.6"/><path d="M10.6 5.3v2.4M13.4 5.3v2.4"/><path d="M8.6 10.2v.6a3.4 3.4 0 0 0 6.8 0v-.6"/><path d="M5 20.5a7 7 0 0 1 14 0"/><path d="M9.5 15.4 12 18l2.5-2.6"/>',
+  /** Documento com caneta: contrato de manutenção (mockup Falanga, 21/10/2026). */
+  contract:
+    '<path d="M13.5 3.5H7a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.5"/><path d="M13.5 3.5 18 8v3"/><path d="M13.5 3.5V8H18"/><path d="M9 12h5M9 15.5h3"/><path d="m15 20.5.5-2.6 4.6-4.6a1.3 1.3 0 0 1 1.9 1.9l-4.6 4.6Z"/>',
+  /** Linha de pulso: diagnóstico técnico (mockup Falanga, 21/10/2026). */
+  pulse: '<path d="M3 12h4.5l2-5.5 4 11 2-5.5H21"/>',
+  /** Prancheta com linhas: plano de manutenção (mockup Falanga, 21/10/2026). */
+  clipboard:
+    '<rect x="5.5" y="4.5" width="13" height="16.5" rx="2"/><path d="M9 3h6v3.2H9z"/><path d="M8.8 11h6.4M8.8 14.5h6.4M8.8 18h4"/>',
+  /** Escudo com check: selo de equipe especializada (mockup Falanga, 21/10/2026). */
+  'shield-check':
+    '<path d="M12 3 19 5.8v5.6c0 4.5-3 7.8-7 9.3-4-1.5-7-4.8-7-9.3V5.8Z"/><path d="m8.7 12.2 2.4 2.4 4.3-4.5"/>',
+  /** Cadeado: nota de privacidade do formulário (mockup Falanga, 21/10/2026). */
+  lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2"/>',
   clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.2l3.5 2"/>',
   zap: '<path d="M13 3 6 13.5h5L10 21l7.5-10.5h-5L13 3Z"/>',
   'map-pin':

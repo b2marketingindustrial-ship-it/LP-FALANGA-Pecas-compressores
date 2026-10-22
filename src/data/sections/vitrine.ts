@@ -7,6 +7,9 @@
  * `groups` vazio deixa a vitrine em grade. Com grupos, cada um vira uma
  * prateleira própria, com a logo (ou o nome) no cabeçalho.
  *
+ * Variante local do mockup do cliente (21/10/2026, docs/BRIEFING.md): cabeçalho com o
+ * traço amarelo e a área atendida (`area`), e faixa de CTA fechando a seção (`closing`).
+ *
  * Fotos da LP antiga da Falanga (falangapneumatica.com.br/pecas-para-compressores/),
  * recortadas e centradas em 800×600. `produto-18.png` (Motor Oil Schulz) segue como
  * placeholder: a LP antiga usava ali a embalagem do MS LUB 1 L.
@@ -54,6 +57,14 @@ export const showcase = {
   eyebrow: 'Catálogo',
   title: 'Peças para todos os modelos de compressores',
   text: 'Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.',
+  /** Linha de área atendida sob o cabeçalho, com o pino (mockup do cliente, 21/10/2026). */
+  area: 'Peças prontas para envio em todo o Nordeste',
+  /** Faixa que fecha a seção, com o CTA `vitrine-cotacao`. */
+  closing: {
+    title: 'Precisa de uma peça que não está aqui?',
+    text: 'Trabalhamos com itens para diversos modelos e marcas de compressores.',
+    cta: 'Solicitar cotação',
+  },
   groups: [
     { id: 'pecas', label: 'Peças de reposição', logo: null },
     { id: 'lubrificantes', label: 'Lubrificantes Schulz', logo: null },
@@ -197,6 +208,8 @@ export const showcase = {
   eyebrow: string
   title: string
   text: string
+  area: string
+  closing: { title: string; text: string; cta: string }
   groups: readonly ShowcaseGroup[]
   items: readonly ShowcaseItem[]
 }

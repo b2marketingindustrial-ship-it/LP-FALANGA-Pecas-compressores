@@ -8,6 +8,8 @@
 
 > **Revisão de 22/10/2026 — conteúdo da LP antiga.** A pedido, o conteúdo foi refeito a partir da página atual do cliente (`falangapneumatica.com.br/pecas-para-compressores/`), mantendo a estrutura e a composição. Entraram: 18 fotos reais na vitrine, a copy da página antiga, as marcas do carrossel "Peças para todos os modelos de compressores" por extenso, os fatos dos rótulos (LUB Schulz para parafuso, MS LUB para pistão), o WhatsApp do botão flutuante antigo e "Revenda" no público.
 
+> **Revisão de 22/10/2026 — linguagem visual da LP de compressores de parafuso.** A pedido ("faça a nova lp na mesma estrutura"), esta LP passou a usar a mesma linguagem visual aprovada pelo cliente na LP irmã `lp-compressores-de-parafuso` (mockup de 21/10/2026): header branco, hero com H1 em linha de abertura e manchete amarela, painel navy largo, faixas de CTA e divisões arredondadas entre seções. **A composição e o conteúdo não mudaram**: continuam `vitrine · identificar · aplicacoes · diferenciais` com o conteúdo da LP antiga. As seções `linhas` e `processo` da LP irmã seguem fora, pelo mesmo motivo da ficha — o material do cliente não as sustenta (ver "Blocos que ficaram fora"). Ver "Desvios do padrão".
+
 ## Origem
 
 | Campo                     | Valor                                                                                             |
@@ -123,20 +125,20 @@ A biblioteca não fica ao lado desta pasta, então o caminho foi passado com `--
 
 > Status `pendente` é o que estava em `assets.pendentes` na ficha: a primeira versão subiu com o placeholder da biblioteca naquele lugar. O `npm run verify` continua falhando enquanto houver um — é o que impede o placeholder de ir ao ar.
 
-| Asset          | Arquivo esperado        | Especificação               | Status                                                                                                                                              |
-| -------------- | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Logo           | `src/assets/LOGO.png`   | 240×200, fundo transparente | pendente — o logo do site (341×82, horizontal, com o selo de 40 anos) é cortado na placa do header; pedir versão 240×200 ou aprovar header adaptado |
-| Banner do hero | `src/assets/heroBg.png` | 1981×900, brief 4.1.3       | pendente                                                                                                                                            |
+| Asset          | Arquivo esperado        | Especificação               | Status                                                                                                                                                |
+| -------------- | ----------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Logo           | `src/assets/LOGO.png`   | 240×200, fundo transparente | **entregue** — logo horizontal 341×82 do site, a mesma da LP irmã. O header branco adotado em 22/10/2026 a alinha na barra, sem a placa que a cortava |
+| Banner do hero | `src/assets/heroBg.png` | 1981×900, brief 4.1.3       | **entregue** — foto do cliente (técnico ao lado de um compressor de parafuso aberto), a mesma da LP irmã                                              |
 
 > Abaixo, uma linha por asset das seções que entraram (`assets` no manifesto de cada uma).
 
-| Asset                       | Arquivo esperado                                            | Especificação                                                      | Status                                                                               |
-| --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | 18 entregues (fotos da LP antiga) · **`produto-18.png` pendente** (Motor Oil Schulz) |
-| Logos dos grupos da vitrine | `src/assets/vitrine/marca-*.png`                            | PNG 400×160                                                        | não usado — prateleiras com o nome do grupo                                          |
-| 4 fotos das aplicações      | `src/assets/aplicacoes/aplicacao-1.png` … `aplicacao-4.png` | 1200×900 (4:3), equipamento em operação                            | pendente — parafuso, pistão, reservatório, transmissão                               |
-| Cenário dos diferenciais    | `src/assets/diferenciais/cenario.jpg`                       | 1600×900, bancada/cenário                                          | pendente                                                                             |
-| Pessoa dos diferenciais     | `src/assets/diferenciais/pessoa.png`                        | 1220×1000, corpo inteiro, fundo transparente                       | pendente                                                                             |
+| Asset                       | Arquivo esperado                                            | Especificação                                                      | Status                                                                                                |
+| --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | 18 entregues (fotos da LP antiga) · **`produto-18.png` pendente** (Motor Oil Schulz)                  |
+| Logos dos grupos da vitrine | `src/assets/vitrine/marca-*.png`                            | PNG 400×160                                                        | não usado — prateleiras com o nome do grupo                                                           |
+| 4 fotos das aplicações      | `src/assets/aplicacoes/aplicacao-1.png` … `aplicacao-4.png` | 1200×900 (4:3), equipamento em operação                            | pendente — parafuso, pistão, reservatório, transmissão                                                |
+| Cenário dos diferenciais    | `src/assets/diferenciais/cenario.jpg`                       | 1600×900, bancada/cenário                                          | **entregue** — foto do cliente (1020×482), a mesma da LP irmã; vem do site, menor que a especificação |
+| Pessoa dos diferenciais     | `src/assets/diferenciais/pessoa.png`                        | 1220×1000, corpo inteiro, fundo transparente                       | **não usado** — a variante do mockup não tem pessoa recortada: o cenário já traz o técnico            |
 
 As fotos da vitrine saíram da LP antiga, uma por produto, na ordem em que a página as mostra (cada foto vem logo antes do nome do produto). Tratamento: recorte, aparo do fundo e produto centrado em 800×600 sobre branco. Exceções:
 
@@ -172,18 +174,46 @@ As imagens `a.png` a `g.png` da LP antiga são logos (Kärcher, Schulz, Wayne, A
 - Foto do Motor Oil Schulz da LP antiga (é a embalagem do MS LUB 1 L).
 - Imagem anexada `image(20261021-125842).png`, que não estava disponível.
 
+## Desvios do padrão
+
+Adotados em 22/10/2026 ao trazer a linguagem visual aprovada na LP irmã `lp-compressores-de-parafuso` (mockup do cliente de 21/10/2026). São os mesmos desvios registrados lá, aplicados ao conteúdo desta LP.
+
+**Estrutura fixa** (regra 13 — Header, Hero, Cotação, Footer):
+
+- **Header branco com a logo na barra**, no lugar da barra navy com a placa pendurada, e CTA em pílula amarela com texto navy. O menu do mockup não entra (uma rota, uma página). Rótulo próprio no desktop: `content.header.cta` = "Fale com um especialista".
+- **Hero com H1 em linha de abertura.** O H1 (`hero.title`, com a palavra-chave da campanha) vai acima da manchete visual, que é `headline` em branco mais `highlight` em amarelo. A foto vai do fim da coluna de texto até a borda da tela, esmaecida à esquerda por máscara. Os pontos passaram de 3 em linha para **4 em grade 2×2**, com ícone amarelo. Um só CTA, em pílula amarela, com a área atendida (`hero.area`) embaixo. O shortcode do chat fica num card branco que encosta na margem da tela. O grid de três colunas e a coluna de 300px do shortcode continuam os do padrão.
+- **Card de cotação.** O formulário fica num card branco com o selo, o título `quote.form.title` e a nota de LGPD com cadeado. O espaço do shortcode fica sem estilo de texto, de propósito.
+- **Divisões arredondadas entre as seções**, cada uma por cima da seguinte (`--lp-round` em `global.css`).
+
+**Variantes locais das seções** (contrato da biblioteca mantido — dados, CTAs, navy, `tone`/`rhythm`):
+
+- `vitrine` — cabeçalho à esquerda com traço amarelo e a área atendida (`area`), prateleiras numeradas, cards contornados com o palco claro do produto, e faixa de CTA fechando a seção (`closing`, CTA `vitrine-cotacao`).
+- `identificar` — painel navy mais largo que o container, fim do título em amarelo (`highlight`), os 6 dados em cards contornados com ícone amarelo, e faixa final com selo e CTA de rótulo próprio (`cta`).
+- `aplicacoes` — faixa de CTA fechando a seção (`closing`, CTA `aplicacoes-atendimento`).
+- `diferenciais` — sem pessoa recortada: o cenário já traz o técnico. CTA de rótulo próprio (`cta`) e área atendida (`area`) abaixo dele.
+
+> `npm run compose` recopia os componentes da biblioteca e desfaz as variantes. Recompor a página exige reaplicá-las a partir do git. O aviso está no topo de cada componente alterado.
+
+**Exceções nos scripts**, para o padrão continuar guardando a partir da base nova:
+
+- `scripts/ficha.mjs` aceita **4** pontos no hero (eram exatamente 3) e lê chaves de ícone entre aspas.
+- `scripts/check-lp.mjs` tem as assinaturas de `Header.astro` e `Hero.astro` **repinadas** na estrutura nova — continuam pegando mudança acidental, agora desta base.
+
 ## Defeitos do padrão encontrados nesta execução
 
-Registrados para corrigir no starter (não foram corrigidos dentro da LP, exceto o terceiro):
+Registrados para corrigir no starter (o primeiro e o terceiro foram corrigidos dentro da LP):
 
-1. `scripts/ficha.mjs` lê os nomes de ícone com `/^ {2}([a-zA-Z][\w-]*):/` e ignora as chaves entre aspas de `icons.ts` (`'map-pin'`, `'badge-check'`, `'file-text'`, `'settings-2'`…). A ficha recusa ícones que existem; aqui foi usado `pin`, que é o mesmo pino.
+1. `scripts/ficha.mjs` lê os nomes de ícone com `/^ {2}([a-zA-Z][\w-]*):/` e ignora as chaves entre aspas de `icons.ts` (`'map-pin'`, `'badge-check'`, `'file-text'`, `'settings-2'`…). A ficha recusa ícones que existem. **Corrigido aqui em 22/10/2026**, como na LP irmã: o padrão passou a aceitar a chave entre aspas, e `diferenciais` usa `map-pin`.
 2. `scripts/screens.mjs` passa o caminho de saída sem aspas com `shell: true`: em pasta com espaço no nome, o Playwright recebe argumentos quebrados e a captura falha. As capturas desta LP saíram de uma cópia do script com o caminho entre aspas.
 3. `.prettierignore` do template não ignora `docs/PROMPT-FICHA-LP.md` nem `ficha.json`, e o `format:check` falha numa LP recém-criada. Corrigido aqui, como na LP de Manutenção.
-4. O header fixo pede logo 240×200; logo horizontal é cortado pelo `<Image width={240} height={200}>` sem aviso visual.
+4. O header fixo pede logo 240×200; logo horizontal é cortado pelo `<Image width={240} height={200}>` sem aviso visual. **Deixou de afetar esta LP em 22/10/2026**: o header branco alinha a logo na barra, em 341×82. O `check:lp` ainda avisa da proporção contra a especificação da estrutura fixa — aviso esperado, igual ao da LP irmã.
+5. **`Footer.astro` estourava a largura da tela em 1024px** (medido em 22/10/2026). A partir de `lg` o rodapé virava uma linha com `shrink-0` nos dois `<p>` e `lg:whitespace-nowrap` no `<address>`: nada podia encolher nem quebrar, e com um endereço de duas unidades (`site.address` desta LP tem Fortaleza **e** Recife) o documento ia a 1112px num viewport de 1024px, gerando rolagem horizontal na página inteira. **Corrigido aqui em 22/10/2026**, a pedido: o `<address>` ganhou `min-w-0` e o `whitespace-nowrap` subiu de `lg` para `xl`, então o endereço quebra em duas linhas entre 1024 e 1279px e volta a uma linha a partir de 1280px. Medido sem estouro em 360, 390, 768, 1024, 1100, 1180, 1280, 1366, 1440, 1512 e 1920px. A assinatura de estrutura fixa do `check:lp` não muda (não cobre essas classes). **A LP irmã `lp-compressores-de-parafuso` segue com o defeito** — a mesma correção precisa ser aplicada lá e no starter.
 
 ## Lista de `data-cta` (para o GTM)
 
-`header-cta`, `hero-primary`, `hero-secondary`, `vitrine-filtros-de-ar`, `vitrine-filtros-de-oleo`, `vitrine-elementos-filtrantes`, `vitrine-separadores-ar-oleo`, `vitrine-valvulas-de-seguranca`, `vitrine-valvulas-controle-pressao`, `vitrine-acoplamentos`, `vitrine-correias-de-transmissao`, `vitrine-kits-de-junta`, `vitrine-lub-sintetico-8000-20l`, `vitrine-lub-sintetico-8000-4l`, `vitrine-lub-mineral-4000-20l`, `vitrine-lub-mineral-4000-4l`, `vitrine-lub-mineral-1000-20l`, `vitrine-lub-mineral-1000-4l`, `vitrine-ms-lub-4l`, `vitrine-ms-lub-1l`, `vitrine-motor-oil-schulz`, `vitrine-desengripante-sd-50`, `identificar-cta`, `aplicacoes-compressores-parafuso`, `aplicacoes-compressores-pistao`, `aplicacoes-reservatorios`, `aplicacoes-transmissao`, `diferenciais-cta`, `cotacao-whatsapp`, `float-whatsapp` (30).
+`header-cta`, `hero-primary`, `vitrine-filtros-de-ar`, `vitrine-filtros-de-oleo`, `vitrine-elementos-filtrantes`, `vitrine-separadores-ar-oleo`, `vitrine-valvulas-de-seguranca`, `vitrine-valvulas-controle-pressao`, `vitrine-acoplamentos`, `vitrine-correias-de-transmissao`, `vitrine-kits-de-junta`, `vitrine-lub-sintetico-8000-20l`, `vitrine-lub-sintetico-8000-4l`, `vitrine-lub-mineral-4000-20l`, `vitrine-lub-mineral-4000-4l`, `vitrine-lub-mineral-1000-20l`, `vitrine-lub-mineral-1000-4l`, `vitrine-ms-lub-4l`, `vitrine-ms-lub-1l`, `vitrine-motor-oil-schulz`, `vitrine-desengripante-sd-50`, `vitrine-cotacao`, `identificar-cta`, `aplicacoes-compressores-parafuso`, `aplicacoes-compressores-pistao`, `aplicacoes-reservatorios`, `aplicacoes-transmissao`, `aplicacoes-atendimento`, `diferenciais-cta`, `cotacao-whatsapp`, `float-whatsapp` (31).
+
+> Mudou em 22/10/2026 com a linguagem visual nova: saiu `hero-secondary` (o hero passou a ter um só CTA) e entraram `vitrine-cotacao` e `aplicacoes-atendimento`, das faixas que fecham as duas seções. **Reconfigurar o GTM.**
 
 ## Estado da entrega
 

@@ -11,11 +11,20 @@
  * As duas invariantes do conteúdo são verificadas aqui, no build, porque o
  * `contract` do manifesto não expressa condição entre itens: descrição é tudo ou
  * nada, e todo item de vitrine agrupada aponta para um grupo existente.
+ *
+ * VARIANTE LOCAL desta LP (mockup do cliente, 21/10/2026, docs/BRIEFING.md): a mesma
+ * linguagem da LP de compressores de parafuso — cabeçalho à esquerda com o traço
+ * amarelo e a área atendida, cards contornados com o número da prateleira e o palco
+ * claro do produto, e faixa de CTA fechando a seção. O contrato da seção é o mesmo da
+ * biblioteca — dados, CTAs `vitrine-{item.id}`, `tone`/`rhythm` — mais o CTA
+ * `vitrine-cotacao` da faixa final.
+ *
+ * ATENÇÃO: `npm run compose` recopia o componente da biblioteca e desfaz esta variante.
+ * Recompor a página exige reaplicá-la a partir do git.
  */
 import { Image } from 'astro:assets'
 import Section from '@components/Section.astro'
 import Icon from '@components/Icon.astro'
-import SectionHeader from '@components/SectionHeader.astro'
 import type { SectionProps } from '@lib/layout'
 import { showcase, type ShowcaseGroup, type ShowcaseItem } from '@data/sections/vitrine'
 
@@ -67,18 +76,32 @@ for (const shelf of shelves) {
 ---
 
 <Section id="vitrine" tone={tone} rhythm={rhythm}>
-  <SectionHeader
-    eyebrow={showcase.eyebrow}
-    title={showcase.title}
-    text={showcase.text}
-    width="2xl"
-  />
+  {/* Cabeçalho do mockup: traço amarelo, título navy grande e a área atendida */}
+  <div class="max-w-3xl">
+    <p class="flex items-center gap-4 font-sans text-[13px] font-bold tracking-[0.14em] text-brand-blue uppercase sm:text-[14px]">
+      <span aria-hidden="true" class="h-[3px] w-10 shrink-0 rounded-full bg-brand-yellow"></span>
+      {showcase.eyebrow}
+    </p>
+    <h2 class="mt-4 font-display text-[2.25rem] leading-[1.06] font-extrabold tracking-[-0.03em] text-primary-dark sm:text-[2.75rem] lg:text-[3rem] xl:text-[3.4rem]">
+      {showcase.title}
+    </h2>
+    <p class="mt-5 max-w-2xl font-sans text-lg leading-relaxed text-ink-soft xl:text-xl">
+      {showcase.text}
+    </p>
+    <p class="mt-5 flex items-center gap-2.5 font-sans text-[16px] font-medium text-ink">
+      <Icon name="map-pin" class="size-5 shrink-0 text-brand-blue" />
+      {showcase.area}
+    </p>
+  </div>
 
-  <div class="mt-9 flex flex-col gap-10">
-    {shelves.map((shelf) => (
+  <div class="mt-10 flex flex-col gap-10">
+    {shelves.map((shelf, s) => (
       <div data-showcase-shelf>
         {shelf.group && (
-          <div class="flex items-center gap-4 border-b border-neutral-gray-200/70 pb-3">
+          <div class="flex items-center gap-4 border-b border-[#e3e8f1] pb-3">
+            <span class="font-display text-[17px] font-bold text-[#c0c9df]" aria-hidden="true">
+              {String(s + 1).padStart(2, '0')}
+            </span>
             <h3 class="flex min-w-0 items-center">
               {shelf.group.logo ? (
                 <Image
@@ -91,12 +114,12 @@ for (const shelf of shelves) {
                   class="h-8 w-auto max-w-[120px] object-contain"
                 />
               ) : (
-                <span class="font-display text-lg leading-snug font-extrabold text-ink">
+                <span class="font-display text-[20px] leading-snug font-extrabold tracking-[-0.015em] text-brand-blue sm:text-[22px]">
                   {shelf.group.label}
                 </span>
               )}
             </h3>
-            <span class="ml-auto shrink-0 font-sans text-[12px] font-semibold tracking-[0.16em] text-ink-soft uppercase">
+            <span class="ml-auto shrink-0 rounded-full bg-brand-yellow-soft px-3 py-1 font-sans text-[11px] font-bold tracking-[0.12em] text-[#00256f] uppercase">
               {shelf.items.length} itens
             </span>
           </div>
@@ -116,11 +139,11 @@ for (const shelf of shelves) {
               <button
                 type="button"
                 data-cta={`vitrine-${item.id}`}
-                class="btn-slave-whats showcase-card group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-neutral-gray-200/70 bg-neutral-light text-left shadow-[0_1px_2px_rgba(13,29,48,0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1.5 hover:border-accent-orange/50 hover:shadow-[0_28px_56px_-28px_rgba(0,33,71,0.35)]"
+                class="btn-slave-whats showcase-card group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-[#e3e8f1] bg-neutral-light text-left shadow-[0_10px_30px_-24px_rgba(0,33,71,0.35)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1.5 hover:border-brand-blue/30 hover:shadow-[0_28px_56px_-28px_rgba(0,33,71,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
                 <span
                   aria-hidden="true"
-                  class="absolute inset-x-0 top-0 z-10 h-[3px] origin-left scale-x-0 bg-accent-orange transition-transform duration-300 ease-out group-hover:scale-x-100"
+                  class="absolute inset-x-0 top-0 z-10 h-[3px] origin-left scale-x-0 bg-brand-yellow transition-transform duration-300 ease-out group-hover:scale-x-100"
                 />
 
                 <span class="showcase-card__stage relative flex h-40 items-center justify-center overflow-hidden">
@@ -137,7 +160,7 @@ for (const shelf of shelves) {
 
                 <span class="flex flex-1 items-start justify-between gap-3 px-5 pt-4 pb-4">
                   <span class="flex min-w-0 flex-col gap-1.5">
-                    <span class="font-display text-[15px] leading-snug font-extrabold text-ink">
+                    <span class="font-display text-[15px] leading-snug font-extrabold text-brand-blue">
                       {item.title}
                     </span>
                     {showText && (
@@ -146,8 +169,8 @@ for (const shelf of shelves) {
                       </span>
                     )}
                   </span>
-                  <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-neutral-gray-100 text-primary-dark transition-[background-color,color,transform] duration-300 group-hover:translate-x-0.5 group-hover:bg-accent-orange group-hover:text-neutral-light">
-                    <Icon name="arrow-right" class="size-3.5" />
+                  <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-yellow-soft text-[#00256f] transition-[background-color,color,transform] duration-300 group-hover:translate-x-0.5 group-hover:bg-brand-yellow">
+                    <Icon name="arrow-right" class="size-3.5 [stroke-width:2.4]" />
                   </span>
                 </span>
               </button>
@@ -161,7 +184,7 @@ for (const shelf of shelves) {
               type="button"
               data-rail-prev
               aria-label={`Produto anterior de ${shelf.group?.label}`}
-              class="flex size-10 items-center justify-center rounded-full border border-neutral-gray-200 bg-neutral-light text-primary-dark transition-colors hover:border-accent-orange hover:text-accent-orange"
+              class="flex size-10 items-center justify-center rounded-full border border-[#e3e8f1] bg-neutral-light text-brand-blue transition-colors hover:border-brand-blue/40 hover:bg-brand-mist motion-reduce:transition-none"
             >
               <Icon name="chevron-right" class="size-4 rotate-180" />
             </button>
@@ -169,7 +192,7 @@ for (const shelf of shelves) {
               type="button"
               data-rail-next
               aria-label={`Próximo produto de ${shelf.group?.label}`}
-              class="flex size-10 items-center justify-center rounded-full border border-neutral-gray-200 bg-neutral-light text-primary-dark transition-colors hover:border-accent-orange hover:text-accent-orange"
+              class="flex size-10 items-center justify-center rounded-full border border-[#e3e8f1] bg-neutral-light text-brand-blue transition-colors hover:border-brand-blue/40 hover:bg-brand-mist motion-reduce:transition-none"
             >
               <Icon name="chevron-right" class="size-4" />
             </button>
@@ -177,6 +200,29 @@ for (const shelf of shelves) {
         )}
       </div>
     ))}
+  </div>
+
+  {/* Faixa de CTA */}
+  <div class="mt-10 flex flex-col gap-5 rounded-2xl bg-brand-mist px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+    <div class="flex items-center gap-5">
+      <span aria-hidden="true" class="h-12 w-1 shrink-0 rounded-full bg-brand-yellow"></span>
+      <div>
+        <p class="font-display text-[20px] leading-snug font-extrabold text-brand-blue sm:text-[22px]">
+          {showcase.closing.title}
+        </p>
+        <p class="mt-1 font-sans text-[15px] text-ink-soft sm:text-[16px]">
+          {showcase.closing.text}
+        </p>
+      </div>
+    </div>
+    <button
+      type="button"
+      data-cta="vitrine-cotacao"
+      class="btn-slave-whats inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-brand-blue px-8 py-4 font-sans text-[17px] font-bold text-neutral-light shadow-[0_14px_30px_-16px_rgba(0,67,161,0.7)] transition-colors duration-200 hover:bg-brand-blue-dark motion-reduce:transition-none"
+    >
+      <Icon name="whatsapp" class="size-6 shrink-0" />
+      {showcase.closing.cta}
+    </button>
   </div>
 </Section>
 

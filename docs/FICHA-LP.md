@@ -103,10 +103,12 @@ conteudo:
   title: Peças para compressor Schulz e lubrificantes | Falanga Pneumática
   description: Peças para compressor Schulz, Atlas Copco, Sullair, Ingersoll Rand e outras marcas, e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.
   hero:
-    eyebrow: Peças e lubrificantes
-    title: Peças para compressor Schulz e lubrificantes
-    text: Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada e atendimento em todo o Nordeste.
-    banner: Filtros, separadores e lubrificantes para compressor sobre fundo técnico
+    title: Peças para compressor Schulz
+    headline: [Peça certa.]
+    highlight: [Menos parada, na sua produção.]
+    text: Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.
+    area: [Fortaleza e Recife, Atendimento em todo o Nordeste]
+    banner: Técnico da Falanga ao lado de um compressor de parafuso Schulz aberto, numa sala com outros compressores
     points:
       - icon: shield
         line1: Peças originais
@@ -114,9 +116,12 @@ conteudo:
       - icon: layers
         line1: Diversos modelos
         line2: e marcas
-      - icon: pin
-        line1: Atendimento em
-        line2: todo o Nordeste
+      - icon: droplet
+        line1: Lubrificantes
+        line2: Schulz
+      - icon: users
+        line1: Equipe
+        line2: especializada
   quote:
     eyebrow: Solicite sua cotação
     title: Fale com quem entende de peças e lubrificantes para compressores.
@@ -128,6 +133,9 @@ conteudo:
         label: Itens prontos para envio
       - icon: pin
         label: Atendimento em todo o Nordeste
+    form:
+      title: Como podemos ajudar?
+      text: Preencha os dados e conte qual peça ou lubrificante o seu compressor precisa.
     lgpd: Seus dados serão usados apenas para responder à sua solicitação de cotação, conforme a LGPD.
 
 blocos:
@@ -138,6 +146,11 @@ blocos:
     eyebrow: Catálogo
     title: Peças para todos os modelos de compressores
     text: Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.
+    area: Peças prontas para envio em todo o Nordeste
+    closing:
+      title: Precisa de uma peça que não está aqui?
+      text: Trabalhamos com itens para diversos modelos e marcas de compressores.
+      cta: Solicitar cotação
     groups:
       - id: pecas
         label: Peças de reposição
@@ -256,7 +269,9 @@ blocos:
     papeis: [Manutenção, Compras]
     eyebrow: Apoio na identificação
     title: Precisa identificar a peça certa?
+    highlight: a peça certa?
     microcopy: Retorno da equipe especializada
+    cta: Identifique sua peça
     text: Não precisa ter todos os dados em mãos. Envie o que você tiver e nossa equipe identifica a peça ou o lubrificante certo para o seu compressor.
     items:
       - icon: barcode
@@ -293,6 +308,10 @@ blocos:
     eyebrow: Aplicações
     title: Reposição para cada parte do compressor
     text: Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.
+    closing:
+      title: Não encontrou a sua peça?
+      text: Nossa equipe identifica o item certo para o seu compressor.
+      cta: Solicitar atendimento
     items:
       - id: compressores-parafuso
         label: Compressores de parafuso
@@ -326,8 +345,9 @@ blocos:
     eyebrow: Por que a Falanga
     titleLines: [Não deixe seu, compressor parar.]
     text: Garanta a eficiência dos seus compressores com peças originais para diversos modelos e marcas, lubrificantes Schulz e uma equipe especializada no atendimento de todo o Nordeste.
-    scene: Bancada com filtros, separadores e lubrificantes para compressor
-    person: Especialista da Falanga de braços cruzados
+    cta: Solicitar cotação
+    area: Atendimento em todo o Nordeste
+    scene: Técnico da Falanga na reposição de peças de um compressor de parafuso, com outros compressores ao fundo
     reasons:
       - icon: shield
         title: Peças originais
@@ -335,7 +355,7 @@ blocos:
       - icon: truck
         title: Prontas para envio
         description: Peças e lubrificantes prontos para envio.
-      - icon: pin
+      - icon: map-pin
         title: Atendimento no Nordeste
         description: Unidades em Fortaleza e Recife atendendo toda a região.
       - icon: users
@@ -354,7 +374,7 @@ blocos:
     falta: o material não fala em consolidar a compra de vários itens num pedido só, nem traz a foto de composição
 
 assets:
-  pendentes: [LOGO, heroBg, vitrine, aplicacoes, diferenciais]
+  pendentes: [vitrine, aplicacoes]
 
 conflitos:
   - pede: '"Entre em contato conosco" e "Faça um Orçamento Já!" como CTA'

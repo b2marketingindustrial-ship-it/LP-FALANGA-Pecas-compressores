@@ -41,29 +41,42 @@ export const cta = {
 
 export const header = {
   tagline: site.product,
+  /** Rótulo do CTA do header no desktop, do mockup do cliente (21/10/2026). */
+  cta: 'Fale com um especialista',
 } as const
 
 /* -------------------------------------------------------------------- hero */
 
 export const hero = {
-  eyebrow: 'Peças e lubrificantes',
-  title: 'Peças para compressor Schulz e lubrificantes',
-  text: 'Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada e atendimento em todo o Nordeste.',
+  /**
+   * H1 da página, exibido como a linha de abertura acima da manchete (mockup do cliente,
+   * 21/10/2026). É o que o check:lp confere contra a palavra-chave da campanha.
+   */
+  title: 'Peças para compressor Schulz',
+  /** Manchete visual, uma linha por item: primeiro em branco, depois em amarelo. */
+  headline: ['Peça certa.'],
+  highlight: ['Menos parada', 'na sua produção.'],
+  text: 'Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.',
+  /** Linha de área atendida abaixo do CTA, separada por ponto. */
+  area: ['Fortaleza e Recife', 'Atendimento em todo o Nordeste'],
   banner: {
     src: heroBg,
-    alt: 'Filtros, separadores e lubrificantes para compressor sobre fundo técnico',
+    alt: 'Técnico da Falanga ao lado de um compressor de parafuso Schulz aberto, numa sala com outros compressores',
   },
   points: [
     { icon: 'shield', line1: 'Peças originais', line2: 'prontas para envio' },
     { icon: 'layers', line1: 'Diversos modelos', line2: 'e marcas' },
-    { icon: 'pin', line1: 'Atendimento em', line2: 'todo o Nordeste' },
+    { icon: 'droplet', line1: 'Lubrificantes', line2: 'Schulz' },
+    { icon: 'users', line1: 'Equipe', line2: 'especializada' },
   ],
 } as const satisfies {
-  eyebrow: string
   title: string
+  headline: readonly string[]
+  highlight: readonly string[]
   text: string
+  area: readonly string[]
   banner: Photo
-  points: readonly [HeroPoint, HeroPoint, HeroPoint]
+  points: readonly [HeroPoint, HeroPoint, HeroPoint, HeroPoint]
 }
 
 /* ----------------------------------------------------------------- cotação */
@@ -77,6 +90,14 @@ export const quote = {
     { icon: 'truck', label: 'Itens prontos para envio' },
     { icon: 'pin', label: 'Atendimento em todo o Nordeste' },
   ],
+  /**
+   * Cabeçalho do card do formulário (mockup do cliente, 21/10/2026). O `eyebrow` acima
+   * vai no card, e não mais na coluna de texto, para não aparecer duas vezes lado a lado.
+   */
+  form: {
+    title: 'Como podemos ajudar?',
+    text: 'Preencha os dados e conte qual peça ou lubrificante o seu compressor precisa.',
+  },
   /** Nota de LGPD exibida abaixo do formulário. */
   lgpd: 'Seus dados serão usados apenas para responder à sua solicitação de cotação, conforme a LGPD.',
 } as const satisfies {
@@ -84,6 +105,7 @@ export const quote = {
   title: string
   text: string
   trust: readonly [TrustItem, TrustItem, TrustItem]
+  form: { title: string; text: string }
   lgpd: string
 }
 
