@@ -17,7 +17,7 @@ export const supportPanel = {
   eyebrow: 'Apoio na identificação',
   title: 'Precisa identificar a peça certa?',
   text: 'Não precisa ter todos os dados em mãos. Envie o que você tiver e nossa equipe identifica a peça ou o lubrificante certo para o seu compressor.',
-  microcopy: 'Atendimento com especialista',
+  microcopy: 'Retorno da equipe especializada',
   items: [
     { icon: 'barcode', label: 'Código', hint: 'da peça original' },
     { icon: 'tag', label: 'Marca', hint: 'do compressor' },

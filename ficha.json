@@ -1,6 +1,6 @@
 {
   "ficha": 1,
-  "gerado": "2026-10-22T14:00:16.902Z",
+  "gerado": "2026-10-22T14:26:32.154Z",
   "origem": "docs/FICHA-LP.md",
   "padrao": "2.8.0",
   "cliente": "Falanga Pneumática",
@@ -19,7 +19,7 @@
     "url": "https://falangapneumatica.com.br/pecas-para-compressores/",
     "address": "R. Mirian Rocha, 97 - Fortaleza - CE · Rua Tomaz Gonzaga, 74 - Zumbi, Recife - PE",
     "privacyUrl": "",
-    "whatsapp": "",
+    "whatsapp": "5585996267979",
     "shortcodes": {
       "chat": "[atendimento_chat id=\"default\"]",
       "form": "[atendimento_form id=\"default-form\"]"
@@ -119,31 +119,37 @@
   },
   "publico": [
     "Manutenção",
-    "Compras"
+    "Compras",
+    "Revenda"
   ],
   "marcas": {
     "usarLogos": false,
     "nomes": [
-      "Schulz"
+      "Schulz",
+      "Atlas Copco",
+      "Sullair",
+      "Ingersoll Rand",
+      "Wayne",
+      "Chicago Pneumatic"
     ],
-    "autorizacao": "não solicitada — Schulz citada só por extenso"
+    "autorizacao": "o site atual mostra as logos num carrossel; na LP, só por extenso até o cliente registrar a autorização"
   },
   "tokens": {
     "padrao": true
   },
   "conteudo": {
     "title": "Peças para compressor Schulz e lubrificantes | Falanga Pneumática",
-    "description": "Peças para compressor Schulz e outras marcas: filtros, separadores ar/óleo, válvulas e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.",
+    "description": "Peças para compressor Schulz, Atlas Copco, Sullair, Ingersoll Rand e outras marcas, e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.",
     "hero": {
       "eyebrow": "Peças e lubrificantes",
       "title": "Peças para compressor Schulz e lubrificantes",
-      "text": "Filtros, separadores ar/óleo, válvulas, correias e a linha LUB Schulz para a reposição do seu compressor, com atendimento em todo o Nordeste.",
+      "text": "Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada e atendimento em todo o Nordeste.",
       "banner": "Filtros, separadores e lubrificantes para compressor sobre fundo técnico",
       "points": [
         {
-          "icon": "gear",
-          "line1": "Peças industriais",
-          "line2": "para compressores"
+          "icon": "shield",
+          "line1": "Peças originais",
+          "line2": "prontas para envio"
         },
         {
           "icon": "layers",
@@ -160,7 +166,7 @@
     "quote": {
       "eyebrow": "Solicite sua cotação",
       "title": "Fale com quem entende de peças e lubrificantes para compressores.",
-      "text": "Nossa equipe identifica a peça ou o lubrificante certo para o seu compressor e prepara o orçamento. Preencha o formulário ou fale direto conosco pelo WhatsApp.",
+      "text": "Solicite uma cotação online agora mesmo: nossa equipe identifica a peça ou o lubrificante certo para o seu compressor. Preencha o formulário ou fale direto conosco pelo WhatsApp.",
       "trust": [
         {
           "icon": "shield",
@@ -184,8 +190,8 @@
       "data": "vitrine.ts",
       "conteudo": {
         "eyebrow": "Catálogo",
-        "title": "Peças e lubrificantes para o seu compressor",
-        "text": "Itens de reposição para diversos modelos e marcas e a linha de lubrificantes Schulz. Consulte a disponibilidade com o atendimento.",
+        "title": "Peças para todos os modelos de compressores",
+        "text": "Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.",
         "groups": [
           {
             "id": "pecas",
@@ -204,119 +210,119 @@
             "group": "pecas",
             "title": "Filtros de ar",
             "description": "",
-            "photo": "Filtro de ar para compressor"
+            "photo": "Filtros de ar de diversos formatos para compressor"
           },
           {
             "id": "filtros-de-oleo",
             "group": "pecas",
             "title": "Filtros de óleo",
             "description": "",
-            "photo": "Filtro de óleo para compressor"
+            "photo": "Dois filtros de óleo rosqueáveis para compressor"
           },
           {
             "id": "elementos-filtrantes",
             "group": "pecas",
             "title": "Elementos filtrantes",
             "description": "",
-            "photo": "Elemento filtrante para compressor"
+            "photo": "Elementos filtrantes com tampas metálicas"
           },
           {
             "id": "separadores-ar-oleo",
             "group": "pecas",
             "title": "Separadores ar/óleo",
             "description": "",
-            "photo": "Separador ar/óleo para compressor de parafuso"
+            "photo": "Separadores ar/óleo com flange para compressor de parafuso"
           },
           {
             "id": "valvulas-de-seguranca",
             "group": "pecas",
             "title": "Válvulas de segurança",
             "description": "",
-            "photo": "Válvula de segurança para compressor"
+            "photo": "Válvula de segurança em latão com argola de acionamento"
           },
           {
             "id": "valvulas-controle-pressao",
             "group": "pecas",
             "title": "Válvulas de controle de pressão",
             "description": "",
-            "photo": "Válvula de controle de pressão para compressor"
+            "photo": "Pressostato com manômetros para controle de pressão"
           },
           {
             "id": "acoplamentos",
             "group": "pecas",
             "title": "Acoplamentos",
             "description": "",
-            "photo": "Acoplamento para compressor"
+            "photo": "Acoplamentos e elementos elásticos de diversos modelos"
           },
           {
             "id": "correias-de-transmissao",
             "group": "pecas",
             "title": "Correias de transmissão",
             "description": "",
-            "photo": "Correia de transmissão para compressor"
+            "photo": "Correias de transmissão em V"
           },
           {
             "id": "kits-de-junta",
             "group": "pecas",
             "title": "Kits de junta",
             "description": "",
-            "photo": "Kit de juntas para compressor"
+            "photo": "Juntas e anéis de vedação de um kit de juntas"
           },
           {
             "id": "lub-sintetico-8000-20l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Sintético 8000 20 L",
+            "title": "LUB Schulz Sintético 8000 20 L",
             "description": "",
-            "photo": "Embalagem de 20 L do lubrificante LUB Schulz Sintético 8000"
+            "photo": "Galão de 20 L do LUB Schulz Sintético 8000"
           },
           {
             "id": "lub-sintetico-8000-4l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Sintético 8000 4 L",
+            "title": "LUB Schulz Sintético 8000 4 L",
             "description": "",
-            "photo": "Embalagem de 4 L do lubrificante LUB Schulz Sintético 8000"
+            "photo": "Galão de 4 L do LUB Schulz Sintético 8000"
           },
           {
             "id": "lub-mineral-4000-20l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Mineral 4000 20 L",
+            "title": "LUB Schulz Mineral 4000 20 L",
             "description": "",
-            "photo": "Embalagem de 20 L do lubrificante LUB Schulz Mineral 4000"
+            "photo": "Galão de 20 L do LUB Schulz Mineral 4000"
           },
           {
             "id": "lub-mineral-4000-4l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Mineral 4000 4 L",
+            "title": "LUB Schulz Mineral 4000 4 L",
             "description": "",
-            "photo": "Embalagem de 4 L do lubrificante LUB Schulz Mineral 4000"
+            "photo": "Galão de 4 L do LUB Schulz Mineral 4000"
           },
           {
             "id": "lub-mineral-1000-20l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Mineral 1000 20 L",
+            "title": "LUB Schulz Mineral 1000 20 L",
             "description": "",
-            "photo": "Embalagem de 20 L do lubrificante LUB Schulz Mineral 1000"
+            "photo": "Galão de 20 L do LUB Schulz Mineral 1000"
           },
           {
             "id": "lub-mineral-1000-4l",
             "group": "lubrificantes",
-            "title": "LUB Schulz Mineral 1000 4 L",
+            "title": "LUB Schulz Mineral 1000 4 L",
             "description": "",
-            "photo": "Embalagem de 4 L do lubrificante LUB Schulz Mineral 1000"
+            "photo": "Galão de 4 L do LUB Schulz Mineral 1000"
           },
           {
             "id": "ms-lub-4l",
             "group": "lubrificantes",
-            "title": "MS LUB Schulz 4 L",
+            "title": "MS LUB Schulz 4 L",
             "description": "",
-            "photo": "Embalagem de 4 L do MS LUB Schulz"
+            "photo": "Galão de 4 L do MS LUB Schulz"
           },
           {
             "id": "ms-lub-1l",
             "group": "lubrificantes",
-            "title": "MS LUB Schulz 1 L",
+            "title": "MS LUB Schulz 1 L",
             "description": "",
-            "photo": "Embalagem de 1 L do MS LUB Schulz"
+            "photo": "Frasco de 1 L do MS LUB Schulz"
           },
           {
             "id": "motor-oil-schulz",
@@ -330,7 +336,7 @@
             "group": "lubrificantes",
             "title": "Desengripante SD 50",
             "description": "",
-            "photo": "Embalagem do desengripante SD 50"
+            "photo": "Spray desengripante SD 50 Schulz"
           }
         ]
       }
@@ -341,7 +347,7 @@
       "conteudo": {
         "eyebrow": "Apoio na identificação",
         "title": "Precisa identificar a peça certa?",
-        "microcopy": "Atendimento com especialista",
+        "microcopy": "Retorno da equipe especializada",
         "text": "Não precisa ter todos os dados em mãos. Envie o que você tiver e nossa equipe identifica a peça ou o lubrificante certo para o seu compressor.",
         "items": [
           {
@@ -383,18 +389,18 @@
       "conteudo": {
         "eyebrow": "Aplicações",
         "title": "Reposição para cada parte do compressor",
-        "text": "Itens de reposição e lubrificantes para compressores de parafuso e de pistão e para os componentes que trabalham com eles.",
+        "text": "Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.",
         "items": [
           {
             "id": "compressores-parafuso",
             "label": "Compressores de parafuso",
-            "description": "Filtros de ar e óleo, separadores ar/óleo e lubrificantes para a unidade de parafuso.",
+            "description": "Filtros, separadores ar/óleo e óleos LUB Schulz para compressores rotativos de parafuso.",
             "photo": "Compressor de parafuso industrial em sala de compressores"
           },
           {
             "id": "compressores-pistao",
             "label": "Compressores de pistão",
-            "description": "Válvulas, kits de junta e lubrificantes para compressores de pistão.",
+            "description": "Válvulas, kits de junta e o óleo MS LUB Schulz para compressores alternativos de pistão.",
             "photo": "Compressor de pistão com reservatório de ar"
           },
           {
@@ -421,14 +427,14 @@
           "Não deixe seu",
           "compressor parar."
         ],
-        "text": "Peças originais para diversos modelos e marcas, a linha de lubrificantes Schulz e atendimento com especialista para manter o seu ar comprimido em operação.",
+        "text": "Garanta a eficiência dos seus compressores com peças originais para diversos modelos e marcas, lubrificantes Schulz e uma equipe especializada no atendimento de todo o Nordeste.",
         "scene": "Bancada com filtros, separadores e lubrificantes para compressor",
         "person": "Especialista da Falanga de braços cruzados",
         "reasons": [
           {
             "icon": "shield",
             "title": "Peças originais",
-            "description": "Opções para diversos modelos e marcas de compressor."
+            "description": "Para diversos modelos e marcas de compressores."
           },
           {
             "icon": "truck",
@@ -438,17 +444,17 @@
           {
             "icon": "pin",
             "title": "Atendimento no Nordeste",
-            "description": "Cobertura em toda a região, a partir de Fortaleza e Recife."
+            "description": "Unidades em Fortaleza e Recife atendendo toda a região."
           },
           {
-            "icon": "search",
-            "title": "Atendimento personalizado",
-            "description": "Apoio para identificar o produto certo para o seu compressor."
+            "icon": "users",
+            "title": "Equipe especializada",
+            "description": "Apoio para identificar a peça certa para o seu compressor."
           },
           {
             "icon": "chat",
-            "title": "Especialista disponível",
-            "description": "Orçamento e dúvidas direto com um especialista."
+            "title": "Cotação online",
+            "description": "Orçamento pelo formulário ou direto no WhatsApp."
           }
         ]
       }

@@ -20,19 +20,20 @@ export interface Application {
 export const applications = {
   eyebrow: 'Aplicações',
   title: 'Reposição para cada parte do compressor',
-  text: 'Itens de reposição e lubrificantes para compressores de parafuso e de pistão e para os componentes que trabalham com eles.',
+  text: 'Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.',
   items: [
     {
       id: 'compressores-parafuso',
       label: 'Compressores de parafuso',
       description:
-        'Filtros de ar e óleo, separadores ar/óleo e lubrificantes para a unidade de parafuso.',
+        'Filtros, separadores ar/óleo e óleos LUB Schulz para compressores rotativos de parafuso.',
       photo: { src: app1, alt: 'Compressor de parafuso industrial em sala de compressores' },
     },
     {
       id: 'compressores-pistao',
       label: 'Compressores de pistão',
-      description: 'Válvulas, kits de junta e lubrificantes para compressores de pistão.',
+      description:
+        'Válvulas, kits de junta e o óleo MS LUB Schulz para compressores alternativos de pistão.',
       photo: { src: app2, alt: 'Compressor de pistão com reservatório de ar' },
     },
     {

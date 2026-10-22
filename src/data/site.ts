@@ -39,7 +39,7 @@ export const title = `Peças para compressor Schulz e lubrificantes | ${site.bra
 
 /** Meta description (≤ 160 caracteres). Ajuste o texto, mantendo marcas e o apoio técnico. */
 export const description =
-  'Peças para compressor Schulz e outras marcas: filtros, separadores ar/óleo, válvulas e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.'
+  'Peças para compressor Schulz, Atlas Copco, Sullair, Ingersoll Rand e outras marcas, e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.'
 
 /**
  * Campanha que leva tráfego para esta LP (entrada 15). Quem clica digitou a
@@ -101,4 +101,4 @@ export const campaign = {
 }
 
 /** WhatsApp comercial (entrada 12). Número no formato internacional, só dígitos (ex.: 5511999999999). Vazio desativa o botão flutuante. */
-export const whatsapp = ''
+export const whatsapp = '5585996267979'

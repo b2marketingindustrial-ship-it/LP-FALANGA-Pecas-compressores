@@ -48,13 +48,13 @@ export const header = {
 export const hero = {
   eyebrow: 'Peças e lubrificantes',
   title: 'Peças para compressor Schulz e lubrificantes',
-  text: 'Filtros, separadores ar/óleo, válvulas, correias e a linha LUB Schulz para a reposição do seu compressor, com atendimento em todo o Nordeste.',
+  text: 'Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada e atendimento em todo o Nordeste.',
   banner: {
     src: heroBg,
     alt: 'Filtros, separadores e lubrificantes para compressor sobre fundo técnico',
   },
   points: [
-    { icon: 'gear', line1: 'Peças industriais', line2: 'para compressores' },
+    { icon: 'shield', line1: 'Peças originais', line2: 'prontas para envio' },
     { icon: 'layers', line1: 'Diversos modelos', line2: 'e marcas' },
     { icon: 'pin', line1: 'Atendimento em', line2: 'todo o Nordeste' },
   ],
@@ -71,7 +71,7 @@ export const hero = {
 export const quote = {
   eyebrow: 'Solicite sua cotação',
   title: `Fale com quem entende de ${site.product.toLowerCase()}.`,
-  text: 'Nossa equipe identifica a peça ou o lubrificante certo para o seu compressor e prepara o orçamento. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
+  text: 'Solicite uma cotação online agora mesmo: nossa equipe identifica a peça ou o lubrificante certo para o seu compressor. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
   trust: [
     { icon: 'shield', label: 'Peças originais' },
     { icon: 'truck', label: 'Itens prontos para envio' },

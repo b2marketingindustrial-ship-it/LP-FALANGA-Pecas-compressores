@@ -6,6 +6,10 @@
  *
  * `groups` vazio deixa a vitrine em grade. Com grupos, cada um vira uma
  * prateleira própria, com a logo (ou o nome) no cabeçalho.
+ *
+ * Fotos da LP antiga da Falanga (falangapneumatica.com.br/pecas-para-compressores/),
+ * recortadas e centradas em 800×600. `produto-18.png` (Motor Oil Schulz) segue como
+ * placeholder: a LP antiga usava ali a embalagem do MS LUB 1 L.
  */
 import type { Photo } from '@data/types'
 
@@ -48,8 +52,8 @@ export interface ShowcaseItem {
 
 export const showcase = {
   eyebrow: 'Catálogo',
-  title: 'Peças e lubrificantes para o seu compressor',
-  text: 'Itens de reposição para diversos modelos e marcas e a linha de lubrificantes Schulz. Consulte a disponibilidade com o atendimento.',
+  title: 'Peças para todos os modelos de compressores',
+  text: 'Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.',
   groups: [
     { id: 'pecas', label: 'Peças de reposição', logo: null },
     { id: 'lubrificantes', label: 'Lubrificantes Schulz', logo: null },
@@ -60,122 +64,119 @@ export const showcase = {
       group: 'pecas',
       title: 'Filtros de ar',
       description: '',
-      photo: { src: produto1, alt: 'Filtro de ar para compressor' },
+      photo: { src: produto1, alt: 'Filtros de ar de diversos formatos para compressor' },
     },
     {
       id: 'filtros-de-oleo',
       group: 'pecas',
       title: 'Filtros de óleo',
       description: '',
-      photo: { src: produto2, alt: 'Filtro de óleo para compressor' },
+      photo: { src: produto2, alt: 'Dois filtros de óleo rosqueáveis para compressor' },
     },
     {
       id: 'elementos-filtrantes',
       group: 'pecas',
       title: 'Elementos filtrantes',
       description: '',
-      photo: { src: produto3, alt: 'Elemento filtrante para compressor' },
+      photo: { src: produto3, alt: 'Elementos filtrantes com tampas metálicas' },
     },
     {
       id: 'separadores-ar-oleo',
       group: 'pecas',
       title: 'Separadores ar/óleo',
       description: '',
-      photo: { src: produto4, alt: 'Separador ar/óleo para compressor de parafuso' },
+      photo: { src: produto4, alt: 'Separadores ar/óleo com flange para compressor de parafuso' },
     },
     {
       id: 'valvulas-de-seguranca',
       group: 'pecas',
       title: 'Válvulas de segurança',
       description: '',
-      photo: { src: produto5, alt: 'Válvula de segurança para compressor' },
+      photo: { src: produto5, alt: 'Válvula de segurança em latão com argola de acionamento' },
     },
     {
       id: 'valvulas-controle-pressao',
       group: 'pecas',
       title: 'Válvulas de controle de pressão',
       description: '',
-      photo: { src: produto6, alt: 'Válvula de controle de pressão para compressor' },
+      photo: { src: produto6, alt: 'Pressostato com manômetros para controle de pressão' },
     },
     {
       id: 'acoplamentos',
       group: 'pecas',
       title: 'Acoplamentos',
       description: '',
-      photo: { src: produto7, alt: 'Acoplamento para compressor' },
+      photo: { src: produto7, alt: 'Acoplamentos e elementos elásticos de diversos modelos' },
     },
     {
       id: 'correias-de-transmissao',
       group: 'pecas',
       title: 'Correias de transmissão',
       description: '',
-      photo: { src: produto8, alt: 'Correia de transmissão para compressor' },
+      photo: { src: produto8, alt: 'Correias de transmissão em V' },
     },
     {
       id: 'kits-de-junta',
       group: 'pecas',
       title: 'Kits de junta',
       description: '',
-      photo: { src: produto9, alt: 'Kit de juntas para compressor' },
+      photo: { src: produto9, alt: 'Juntas e anéis de vedação de um kit de juntas' },
     },
     {
       id: 'lub-sintetico-8000-20l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Sintético 8000 20 L',
+      title: 'LUB Schulz Sintético 8000 20\u00a0L',
       description: '',
-      photo: {
-        src: produto10,
-        alt: 'Embalagem de 20 L do lubrificante LUB Schulz Sintético 8000',
-      },
+      photo: { src: produto10, alt: 'Galão de 20 L do LUB Schulz Sintético 8000' },
     },
     {
       id: 'lub-sintetico-8000-4l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Sintético 8000 4 L',
+      title: 'LUB Schulz Sintético 8000 4\u00a0L',
       description: '',
-      photo: { src: produto11, alt: 'Embalagem de 4 L do lubrificante LUB Schulz Sintético 8000' },
+      photo: { src: produto11, alt: 'Galão de 4 L do LUB Schulz Sintético 8000' },
     },
     {
       id: 'lub-mineral-4000-20l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 4000 20 L',
+      title: 'LUB Schulz Mineral 4000 20\u00a0L',
       description: '',
-      photo: { src: produto12, alt: 'Embalagem de 20 L do lubrificante LUB Schulz Mineral 4000' },
+      photo: { src: produto12, alt: 'Galão de 20 L do LUB Schulz Mineral 4000' },
     },
     {
       id: 'lub-mineral-4000-4l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 4000 4 L',
+      title: 'LUB Schulz Mineral 4000 4\u00a0L',
       description: '',
-      photo: { src: produto13, alt: 'Embalagem de 4 L do lubrificante LUB Schulz Mineral 4000' },
+      photo: { src: produto13, alt: 'Galão de 4 L do LUB Schulz Mineral 4000' },
     },
     {
       id: 'lub-mineral-1000-20l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 1000 20 L',
+      title: 'LUB Schulz Mineral 1000 20\u00a0L',
       description: '',
-      photo: { src: produto14, alt: 'Embalagem de 20 L do lubrificante LUB Schulz Mineral 1000' },
+      photo: { src: produto14, alt: 'Galão de 20 L do LUB Schulz Mineral 1000' },
     },
     {
       id: 'lub-mineral-1000-4l',
       group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 1000 4 L',
+      title: 'LUB Schulz Mineral 1000 4\u00a0L',
       description: '',
-      photo: { src: produto15, alt: 'Embalagem de 4 L do lubrificante LUB Schulz Mineral 1000' },
+      photo: { src: produto15, alt: 'Galão de 4 L do LUB Schulz Mineral 1000' },
     },
     {
       id: 'ms-lub-4l',
       group: 'lubrificantes',
-      title: 'MS LUB Schulz 4 L',
+      title: 'MS LUB Schulz 4\u00a0L',
       description: '',
-      photo: { src: produto16, alt: 'Embalagem de 4 L do MS LUB Schulz' },
+      photo: { src: produto16, alt: 'Galão de 4 L do MS LUB Schulz' },
     },
     {
       id: 'ms-lub-1l',
       group: 'lubrificantes',
-      title: 'MS LUB Schulz 1 L',
+      title: 'MS LUB Schulz 1\u00a0L',
       description: '',
-      photo: { src: produto17, alt: 'Embalagem de 1 L do MS LUB Schulz' },
+      photo: { src: produto17, alt: 'Frasco de 1 L do MS LUB Schulz' },
     },
     {
       id: 'motor-oil-schulz',
@@ -189,7 +190,7 @@ export const showcase = {
       group: 'lubrificantes',
       title: 'Desengripante SD 50',
       description: '',
-      photo: { src: produto19, alt: 'Embalagem do desengripante SD 50' },
+      photo: { src: produto19, alt: 'Spray desengripante SD 50 Schulz' },
     },
   ],
 } as const satisfies {

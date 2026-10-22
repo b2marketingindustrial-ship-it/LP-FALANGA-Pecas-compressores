@@ -6,17 +6,20 @@
 
 > **Desvio de fluxo registrado.** Esta ficha **não** saiu de uma entrevista no chat: foi montada no editor a partir do briefing organizado, por pedido de uma primeira versão ("construa essa lp"), como na LP de Manutenção da Falanga. Os blocos `identificar` e `aplicacoes` estavam `insuficiente` no briefing e foram preenchidos por inferência para a página ter apoio e prova. Validar com o comercial antes de publicar.
 
+> **Revisão de 22/10/2026 — conteúdo da LP antiga.** A pedido, o conteúdo foi refeito a partir da página atual do cliente (`falangapneumatica.com.br/pecas-para-compressores/`), mantendo a estrutura e a composição. Entraram: 18 fotos reais na vitrine, a copy da página antiga, as marcas do carrossel "Peças para todos os modelos de compressores" por extenso, os fatos dos rótulos (LUB Schulz para parafuso, MS LUB para pistão), o WhatsApp do botão flutuante antigo e "Revenda" no público.
+
 ## Origem
 
-| Campo                     | Valor                                                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| Ficha de execução         | `docs/FICHA-LP.md`                                                                               |
-| Data da ficha             | 2026-10-22                                                                                       |
-| Versão do padrão na ficha | 2.8.0                                                                                            |
-| Validada em               | `22/10/2026` por `npm run ficha`                                                                 |
-| Material bruto do cliente | `docs/briefing-cliente/briefing_falanga_pecas_lubrificantes.md` (fora do git)                    |
-| Briefing de campanha      | não — só palavras-chave e negativas dos grupos                                                   |
-| Fora desta execução       | grupos pausados de peças e lubrificantes (ver Conteúdo futuro); LP de Manutenção, em outra pasta |
+| Campo                     | Valor                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| Ficha de execução         | `docs/FICHA-LP.md`                                                                                |
+| Data da ficha             | 2026-10-22                                                                                        |
+| Versão do padrão na ficha | 2.8.0                                                                                             |
+| Validada em               | `22/10/2026` por `npm run ficha`                                                                  |
+| Material bruto do cliente | `docs/briefing-cliente/briefing_falanga_pecas_lubrificantes.md` (fora do git)                     |
+| LP antiga do cliente      | https://falangapneumatica.com.br/pecas-para-compressores/ — fonte da copy, das fotos e das marcas |
+| Briefing de campanha      | não — só palavras-chave e negativas dos grupos                                                    |
+| Fora desta execução       | grupos pausados de peças e lubrificantes (ver Conteúdo futuro); LP de Manutenção, em outra pasta  |
 
 ## Campanha
 
@@ -46,10 +49,11 @@
 
 ### Comitê de compra
 
-| Papel      | Argumento de compra                                          | Bloco que responde                          | Status       |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------- | ------------ |
-| Manutenção | achar a peça certa sem ter o código em mãos                  | `identificar`, `aplicacoes`, `vitrine`      | **inferido** |
-| Compras    | itens prontos para envio, peças originais, um só atendimento | `diferenciais`, selos da cotação, `vitrine` | **inferido** |
+| Papel      | Argumento de compra                                          | Bloco que responde                          | Status                                               |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------- | ---------------------------------------------------- |
+| Manutenção | achar a peça certa sem ter o código em mãos                  | `identificar`, `aplicacoes`, `vitrine`      | **inferido**                                         |
+| Compras    | itens prontos para envio, peças originais, um só atendimento | `diferenciais`, selos da cotação, `vitrine` | **inferido**                                         |
+| Revenda    | catálogo amplo de peças e a linha de lubrificantes Schulz    | `vitrine`                                   | formulário antigo pergunta "para consumo ou revenda" |
 
 ### Conteúdo futuro
 
@@ -97,23 +101,23 @@ A biblioteca não fica ao lado desta pasta, então o caminho foi passado com `--
 
 > Transcritas da ficha. "Origem" diz de onde o valor saiu na conversa do chat: material do cliente, briefing de campanha, decisão do usuário ou default do padrão.
 
-| #   | Entrada                 | Valor                                                                                            | Origem                                             |
-| --- | ----------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
-| 1   | MARCA                   | Falanga Pneumática                                                                               | briefing (inferido do domínio)                     |
-| 2   | MARCA_CURTA             | Falanga                                                                                          | briefing                                           |
-| 3   | PRODUTO_PRINCIPAL       | Peças e lubrificantes para compressores                                                          | briefing (inferido)                                |
-| 4   | CONTEXTO_DE_USO         | reposição de componentes                                                                         | briefing (inferido; evita "manutenção")            |
-| 5   | PUBLICO                 | Manutenção, Compras                                                                              | **inferido** — ausente no material                 |
-| 6   | HERO                    | Peças industriais para compressores · Diversos modelos e marcas · Atendimento em todo o Nordeste | briefing                                           |
-| 7   | MARCAS_ATENDIDAS        | Schulz, só por extenso                                                                           | logos de terceiros: sem autorização registrada     |
-| 8   | SELOS_DE_CONFIANCA      | Peças originais · Itens prontos para envio · Atendimento em todo o Nordeste                      | briefing                                           |
-| 9   | ENDERECO                | R. Mirian Rocha, 97 - Fortaleza - CE · Rua Tomaz Gonzaga, 74 - Zumbi, Recife - PE                | briefing (sem CEP)                                 |
-| 10  | URL_FINAL + PRIVACIDADE | `https://falangapneumatica.com.br/pecas-para-compressores/` · sem política                       | **provisório** — URL de referência do briefing     |
-| 11  | SHORTCODES              | `[atendimento_chat id="default"]` · `[atendimento_form id="default-form"]`                       | default do plugin                                  |
-| 12  | WHATSAPP                | vazio — sem botão flutuante                                                                      | número não informado                               |
-| 13  | STACK + PUBLICACAO      | Astro, `main` → `wp-build`                                                                       | default do padrão                                  |
-| 14  | TOKENS_DE_COR + FONTE   | visual padrão                                                                                    | default (a LP de Manutenção usa o amarelo da logo) |
-| 15  | CAMPANHA                | `peças para compressor Schulz`                                                                   | lista de palavras-chave                            |
+| #   | Entrada                 | Valor                                                                                           | Origem                                                   |
+| --- | ----------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| 1   | MARCA                   | Falanga Pneumática                                                                              | briefing (inferido do domínio)                           |
+| 2   | MARCA_CURTA             | Falanga                                                                                         | briefing                                                 |
+| 3   | PRODUTO_PRINCIPAL       | Peças e lubrificantes para compressores                                                         | briefing (inferido)                                      |
+| 4   | CONTEXTO_DE_USO         | reposição de componentes                                                                        | briefing (inferido; evita "manutenção")                  |
+| 5   | PUBLICO                 | Manutenção, Compras, Revenda                                                                    | **inferido**; revenda vem do formulário da LP antiga     |
+| 6   | HERO                    | Peças originais prontas para envio · Diversos modelos e marcas · Atendimento em todo o Nordeste | LP antiga                                                |
+| 7   | MARCAS_ATENDIDAS        | Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic — só por extenso         | carrossel da LP antiga; logos sem autorização registrada |
+| 8   | SELOS_DE_CONFIANCA      | Peças originais · Itens prontos para envio · Atendimento em todo o Nordeste                     | briefing                                                 |
+| 9   | ENDERECO                | R. Mirian Rocha, 97 - Fortaleza - CE · Rua Tomaz Gonzaga, 74 - Zumbi, Recife - PE               | briefing (sem CEP)                                       |
+| 10  | URL_FINAL + PRIVACIDADE | `https://falangapneumatica.com.br/pecas-para-compressores/` · sem política                      | **provisório** — URL de referência do briefing           |
+| 11  | SHORTCODES              | `[atendimento_chat id="default"]` · `[atendimento_form id="default-form"]`                      | default do plugin                                        |
+| 12  | WHATSAPP                | `5585996267979` — botão flutuante ligado                                                        | botão flutuante da LP antiga                             |
+| 13  | STACK + PUBLICACAO      | Astro, `main` → `wp-build`                                                                      | default do padrão                                        |
+| 14  | TOKENS_DE_COR + FONTE   | visual padrão                                                                                   | default (a LP de Manutenção usa o amarelo da logo)       |
+| 15  | CAMPANHA                | `peças para compressor Schulz`                                                                  | lista de palavras-chave                                  |
 
 ## Assets
 
@@ -126,25 +130,33 @@ A biblioteca não fica ao lado desta pasta, então o caminho foi passado com `--
 
 > Abaixo, uma linha por asset das seções que entraram (`assets` no manifesto de cada uma).
 
-| Asset                       | Arquivo esperado                                            | Especificação                                                      | Status                                                                      |
-| --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | pendente — na ordem da ficha (1 = Filtros de ar … 19 = Desengripante SD 50) |
-| Logos dos grupos da vitrine | `src/assets/vitrine/marca-*.png`                            | PNG 400×160                                                        | não usado — prateleiras com o nome do grupo                                 |
-| 4 fotos das aplicações      | `src/assets/aplicacoes/aplicacao-1.png` … `aplicacao-4.png` | 1200×900 (4:3), equipamento em operação                            | pendente — parafuso, pistão, reservatório, transmissão                      |
-| Cenário dos diferenciais    | `src/assets/diferenciais/cenario.jpg`                       | 1600×900, bancada/cenário                                          | pendente                                                                    |
-| Pessoa dos diferenciais     | `src/assets/diferenciais/pessoa.png`                        | 1220×1000, corpo inteiro, fundo transparente                       | pendente                                                                    |
+| Asset                       | Arquivo esperado                                            | Especificação                                                      | Status                                                                               |
+| --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| 19 fotos da vitrine         | `src/assets/vitrine/produto-1.png` … `produto-19.png`       | PNG/JPG 800×600 (4:3), produto centrado, fundo branco ou recortado | 18 entregues (fotos da LP antiga) · **`produto-18.png` pendente** (Motor Oil Schulz) |
+| Logos dos grupos da vitrine | `src/assets/vitrine/marca-*.png`                            | PNG 400×160                                                        | não usado — prateleiras com o nome do grupo                                          |
+| 4 fotos das aplicações      | `src/assets/aplicacoes/aplicacao-1.png` … `aplicacao-4.png` | 1200×900 (4:3), equipamento em operação                            | pendente — parafuso, pistão, reservatório, transmissão                               |
+| Cenário dos diferenciais    | `src/assets/diferenciais/cenario.jpg`                       | 1600×900, bancada/cenário                                          | pendente                                                                             |
+| Pessoa dos diferenciais     | `src/assets/diferenciais/pessoa.png`                        | 1220×1000, corpo inteiro, fundo transparente                       | pendente                                                                             |
 
-As 5 imagens citadas no briefing (`/wp-content/uploads/2024/08/b.png` a `f.png`) são logos de Schulz, Wayne, Atlas Copco, Sullair e Ingersoll Rand, não fotos de produto. Não entraram: logo de marca de terceiro exige autorização.
+As fotos da vitrine saíram da LP antiga, uma por produto, na ordem em que a página as mostra (cada foto vem logo antes do nome do produto). Tratamento: recorte, aparo do fundo e produto centrado em 800×600 sobre branco. Exceções:
+
+- A foto de "Filtros de Óleo / Separadores de Óleo e Ar" juntava três produtos: virou três recortes (`produto-2` filtros de óleo, `produto-3` elementos filtrantes, `produto-4` separadores).
+- `produto-11` (Sintético 8000 4 L) vinha com fundo cinza de estúdio, trocado por branco.
+- A LP antiga usa no Motor Oil Schulz a embalagem do MS LUB 1 L (rótulo: "para compressores alternativos de pistão"). A foto não foi usada: `produto-18` segue com o placeholder.
+- Parte das fotos de lubrificante tem nome de arquivo de anúncio de marketplace (`D_NQ_NP_…`): confirmar com o cliente o direito de uso, ou pedir as originais.
+
+As imagens `a.png` a `g.png` da LP antiga são logos (Kärcher, Schulz, Wayne, Atlas Copco, Sullair, Ingersoll Rand, Chicago Pneumatic), não fotos de produto. Não entraram como imagem: logo de marca de terceiro exige autorização registrada. As marcas de compressor entraram por extenso no texto da vitrine.
 
 ## Conflitos com o padrão
 
 > Vem de `conflitos` na ficha: o que o material pedia e o padrão não permite. Registrado, não negociado.
 
-| O que o material pedia                 | Regra do padrão                     | O que entrou no lugar                                   |
-| -------------------------------------- | ----------------------------------- | ------------------------------------------------------- |
-| "Entre em contato conosco" como CTA    | vocabulário padrão de CTA           | "Solicite sua cotação" e "Identifique sua peça"         |
-| Atendimento via WhatsApp sem número    | o botão flutuante precisa do número | sem botão flutuante; o botão da cotação aciona o plugin |
-| "Todas as peças para a sua manutenção" | manutenção é negativa da campanha   | "reposição do seu compressor"                           |
+| O que o material pedia                                        | Regra do padrão                    | O que entrou no lugar                                     |
+| ------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------- |
+| "Entre em contato conosco" e "Faça um Orçamento Já!" como CTA | vocabulário padrão de CTA          | "Solicite sua cotação" e "Identifique sua peça"           |
+| Formulário próprio com finalidade consumo/revenda             | formulário é o shortcode do plugin | shortcode padrão; o campo de finalidade vai para o plugin |
+| "Peças para a sua manutenção" e "peças de manutenção"         | manutenção é negativa da campanha  | "reposição", "eficiência dos seus compressores"           |
+| Menu, telefones e redes sociais no topo                       | uma rota, uma página               | header com logo, tagline e CTA                            |
 
 ## Dados não aplicados
 
@@ -154,7 +166,10 @@ As 5 imagens citadas no briefing (`/wp-content/uploads/2024/08/b.png` a `f.png`)
 - "Precisa de um simples produto ou uma grande automação?" — automação não é oferta desta LP.
 - E-mail `falanga@falangaservice.com.br`.
 - Página institucional "A empresa automação pneumática".
-- Logos de marcas do site atual, sem autorização de uso.
+- Logos de marcas do site atual, sem autorização de uso; a da Kärcher também porque não é marca de compressor.
+- Telefones (85) 98129-5507 (Fortaleza) e (81) 99312-1617 (Recife), Instagram e Facebook da LP antiga.
+- Campo "Finalidade — para consumo ou revenda" do formulário antigo: configurar no plugin.
+- Foto do Motor Oil Schulz da LP antiga (é a embalagem do MS LUB 1 L).
 - Imagem anexada `image(20261021-125842).png`, que não estava disponível.
 
 ## Defeitos do padrão encontrados nesta execução
@@ -168,7 +183,7 @@ Registrados para corrigir no starter (não foram corrigidos dentro da LP, exceto
 
 ## Lista de `data-cta` (para o GTM)
 
-`header-cta`, `hero-primary`, `hero-secondary`, `vitrine-filtros-de-ar`, `vitrine-filtros-de-oleo`, `vitrine-elementos-filtrantes`, `vitrine-separadores-ar-oleo`, `vitrine-valvulas-de-seguranca`, `vitrine-valvulas-controle-pressao`, `vitrine-acoplamentos`, `vitrine-correias-de-transmissao`, `vitrine-kits-de-junta`, `vitrine-lub-sintetico-8000-20l`, `vitrine-lub-sintetico-8000-4l`, `vitrine-lub-mineral-4000-20l`, `vitrine-lub-mineral-4000-4l`, `vitrine-lub-mineral-1000-20l`, `vitrine-lub-mineral-1000-4l`, `vitrine-ms-lub-4l`, `vitrine-ms-lub-1l`, `vitrine-motor-oil-schulz`, `vitrine-desengripante-sd-50`, `identificar-cta`, `aplicacoes-compressores-parafuso`, `aplicacoes-compressores-pistao`, `aplicacoes-reservatorios`, `aplicacoes-transmissao`, `diferenciais-cta`, `cotacao-whatsapp` (29). Sem `float-whatsapp`: não há número.
+`header-cta`, `hero-primary`, `hero-secondary`, `vitrine-filtros-de-ar`, `vitrine-filtros-de-oleo`, `vitrine-elementos-filtrantes`, `vitrine-separadores-ar-oleo`, `vitrine-valvulas-de-seguranca`, `vitrine-valvulas-controle-pressao`, `vitrine-acoplamentos`, `vitrine-correias-de-transmissao`, `vitrine-kits-de-junta`, `vitrine-lub-sintetico-8000-20l`, `vitrine-lub-sintetico-8000-4l`, `vitrine-lub-mineral-4000-20l`, `vitrine-lub-mineral-4000-4l`, `vitrine-lub-mineral-1000-20l`, `vitrine-lub-mineral-1000-4l`, `vitrine-ms-lub-4l`, `vitrine-ms-lub-1l`, `vitrine-motor-oil-schulz`, `vitrine-desengripante-sd-50`, `identificar-cta`, `aplicacoes-compressores-parafuso`, `aplicacoes-compressores-pistao`, `aplicacoes-reservatorios`, `aplicacoes-transmissao`, `diferenciais-cta`, `cotacao-whatsapp`, `float-whatsapp` (30).
 
 ## Estado da entrega
 

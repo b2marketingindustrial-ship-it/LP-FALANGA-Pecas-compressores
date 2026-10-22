@@ -21,7 +21,7 @@ export const why = {
   eyebrow: `Por que a ${site.brandShort}`,
   /** Cada item é uma linha do H2 (quebra forçada). 3–6 palavras no total. */
   titleLines: ['Não deixe seu', 'compressor parar.'],
-  text: 'Peças originais para diversos modelos e marcas, a linha de lubrificantes Schulz e atendimento com especialista para manter o seu ar comprimido em operação.',
+  text: 'Garanta a eficiência dos seus compressores com peças originais para diversos modelos e marcas, lubrificantes Schulz e uma equipe especializada no atendimento de todo o Nordeste.',
   scene: {
     src: cenario,
     alt: 'Bancada com filtros, separadores e lubrificantes para compressor',
@@ -34,7 +34,7 @@ export const why = {
     {
       icon: 'shield',
       title: 'Peças originais',
-      description: 'Opções para diversos modelos e marcas de compressor.',
+      description: 'Para diversos modelos e marcas de compressores.',
     },
     {
       icon: 'truck',
@@ -44,17 +44,17 @@ export const why = {
     {
       icon: 'pin',
       title: 'Atendimento no Nordeste',
-      description: 'Cobertura em toda a região, a partir de Fortaleza e Recife.',
+      description: 'Unidades em Fortaleza e Recife atendendo toda a região.',
     },
     {
-      icon: 'search',
-      title: 'Atendimento personalizado',
-      description: 'Apoio para identificar o produto certo para o seu compressor.',
+      icon: 'users',
+      title: 'Equipe especializada',
+      description: 'Apoio para identificar a peça certa para o seu compressor.',
     },
     {
       icon: 'chat',
-      title: 'Especialista disponível',
-      description: 'Orçamento e dúvidas direto com um especialista.',
+      title: 'Cotação online',
+      description: 'Orçamento pelo formulário ou direto no WhatsApp.',
     },
   ],
 } as const satisfies {
