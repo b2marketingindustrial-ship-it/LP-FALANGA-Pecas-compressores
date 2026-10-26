@@ -14,10 +14,11 @@
  *
  * VARIANTE LOCAL desta LP (mockup do cliente, 21/10/2026, docs/BRIEFING.md): a mesma
  * linguagem da LP de compressores de parafuso — cabeçalho à esquerda com o traço
- * amarelo e a área atendida, cards contornados com o número da prateleira e o palco
- * claro do produto, e faixa de CTA fechando a seção. O contrato da seção é o mesmo da
- * biblioteca — dados, CTAs `vitrine-{item.id}`, `tone`/`rhythm` — mais o CTA
- * `vitrine-cotacao` da faixa final.
+ * amarelo, cards contornados com o número da prateleira e o palco
+ * claro do produto. O contrato da seção é o mesmo da biblioteca — dados, CTAs
+ * `vitrine-{item.id}`, `tone`/`rhythm`. A faixa "Precisa de uma peça que não está aqui?"
+ * (CTA `vitrine-cotacao`) saiu em 26/10/2026: a mensagem passou para o painel de
+ * identificação logo abaixo, numa caixa só.
  *
  * ATENÇÃO: `npm run compose` recopia o componente da biblioteca e desfaz esta variante.
  * Recompor a página exige reaplicá-la a partir do git.
@@ -25,6 +26,7 @@
 import { Image } from 'astro:assets'
 import Section from '@components/Section.astro'
 import Icon from '@components/Icon.astro'
+import BrandCarousel from '@components/BrandCarousel.astro'
 import type { SectionProps } from '@lib/layout'
 import { showcase, type ShowcaseGroup, type ShowcaseItem } from '@data/sections/vitrine'
 
@@ -76,22 +78,31 @@ for (const shelf of shelves) {
 ---
 
 <Section id="vitrine" tone={tone} rhythm={rhythm}>
-  {/* Cabeçalho do mockup: traço amarelo, título navy grande e a área atendida */}
-  <div class="max-w-3xl">
-    <p class="flex items-center gap-4 font-sans text-[13px] font-bold tracking-[0.14em] text-brand-blue uppercase sm:text-[14px]">
-      <span aria-hidden="true" class="h-[3px] w-10 shrink-0 rounded-full bg-brand-yellow"></span>
-      {showcase.eyebrow}
-    </p>
-    <h2 class="mt-4 font-display text-[2.25rem] leading-[1.06] font-extrabold tracking-[-0.03em] text-primary-dark sm:text-[2.75rem] lg:text-[3rem] xl:text-[3.4rem]">
-      {showcase.title}
-    </h2>
-    <p class="mt-5 max-w-2xl font-sans text-lg leading-relaxed text-ink-soft xl:text-xl">
-      {showcase.text}
-    </p>
-    <p class="mt-5 flex items-center gap-2.5 font-sans text-[16px] font-medium text-ink">
-      <Icon name="map-pin" class="size-5 shrink-0 text-brand-blue" />
-      {showcase.area}
-    </p>
+  {/* Cabeçalho em duas colunas: textos à esquerda; à direita, o carrossel de logos que deixa
+      claro que o fornecimento é multimarcas. */}
+  <div class="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
+    <div>
+      <p class="flex items-center gap-4 font-sans text-[13px] font-bold tracking-[0.14em] text-brand-blue uppercase sm:text-[14px]">
+        <span aria-hidden="true" class="h-[3px] w-10 shrink-0 rounded-full bg-brand-yellow"></span>
+        {showcase.eyebrow}
+      </p>
+      <h2 class="mt-4 font-display title-section leading-[1.08] font-extrabold tracking-[-0.03em] text-balance text-primary-dark">
+        {showcase.title}
+      </h2>
+      <p class="mt-5 max-w-[38rem] font-sans text-lead text-ink-soft">{showcase.text}</p>
+    </div>
+
+    {/* Marcas: carrossel de logos solto, sem caixa, e a nota para quem não achou a própria marca. */}
+    <div class="min-w-0">
+      <BrandCarousel visible={3} />
+      <p class="mt-4 flex items-center justify-center gap-2.5 text-center font-sans text-[14px] leading-snug text-ink-soft">
+        <Icon name="help-circle" class="size-5 shrink-0 text-brand-blue" />
+        <span>
+          <strong class="font-semibold text-primary-dark">{showcase.brandsNoteLead}</strong>{' '}
+          {showcase.brandsNote}
+        </span>
+      </p>
+    </div>
   </div>
 
   <div class="mt-10 flex flex-col gap-10">
@@ -126,13 +137,13 @@ for (const shelf of shelves) {
         <ul
           data-showcase-rail
           class:list={[
-            // 5 colunas, e não 4: as prateleiras têm 9 e 10 itens, que em 4 colunas
-            // quebram em 4+4+1 e 4+4+2 e deixam cinco buracos no fim das linhas.
-            // Em 5 viram 5+4 e 5+5 — uma sobra só na página inteira.
+            // Colunas pelo tamanho da prateleira, para fechar as linhas sem buraco:
+            // 8 peças em 4+4, 10 lubrificantes em 5+5.
             'mt-5 gap-4 lg:gap-5',
             railed
-              ? 'scroll-track -mx-6 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:overflow-visible lg:px-0 lg:pb-0'
-              : 'grid grid-cols-2 lg:grid-cols-5',
+              ? 'scroll-track -mx-6 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 lg:mx-0 lg:grid lg:overflow-visible lg:px-0 lg:pb-0'
+              : 'grid grid-cols-2',
+            shelf.items.length % 5 === 0 ? 'lg:grid-cols-5' : 'lg:grid-cols-4',
           ]}
         >
           {shelf.items.map((item) => (
@@ -209,29 +220,6 @@ for (const shelf of shelves) {
         )}
       </div>
     ))}
-  </div>
-
-  {/* Faixa de CTA */}
-  <div class="mt-10 flex flex-col gap-5 rounded-2xl bg-brand-mist px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-10">
-    <div class="flex items-center gap-5">
-      <span aria-hidden="true" class="h-12 w-1 shrink-0 rounded-full bg-brand-yellow"></span>
-      <div>
-        <p class="font-display text-[20px] leading-snug font-extrabold text-brand-blue sm:text-[22px]">
-          {showcase.closing.title}
-        </p>
-        <p class="mt-1 font-sans text-[15px] text-ink-soft sm:text-[16px]">
-          {showcase.closing.text}
-        </p>
-      </div>
-    </div>
-    <button
-      type="button"
-      data-cta="vitrine-cotacao"
-      class="btn-slave-whats inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-brand-blue px-8 py-4 font-sans text-[17px] font-bold text-neutral-light shadow-[0_14px_30px_-16px_rgba(0,67,161,0.7)] transition-colors duration-200 hover:bg-brand-blue-dark motion-reduce:transition-none"
-    >
-      <Icon name="whatsapp" class="size-6 shrink-0" />
-      {showcase.closing.cta}
-    </button>
   </div>
 </Section>
 

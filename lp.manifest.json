@@ -28,7 +28,7 @@
       "dataExport": "showcase",
       "carriesNavy": false,
       "tone": "light",
-      "rhythm": "open",
+      "rhythm": "uniform",
       "tones": [
         "light",
         "gray"
@@ -37,7 +37,8 @@
         "open",
         "even",
         "tight",
-        "flow"
+        "flow",
+        "uniform"
       ],
       "exampleHash": "659a50238d10e7aa",
       "ctas": [
@@ -97,13 +98,14 @@
       "dataExport": "supportPanel",
       "carriesNavy": true,
       "tone": "light",
-      "rhythm": "panel-lead",
+      "rhythm": "uniform",
       "tones": [
         "light",
         "gray"
       ],
       "rhythms": [
-        "panel-lead"
+        "panel-lead",
+        "uniform"
       ],
       "exampleHash": "dfa6bcf7c0258bb1",
       "ctas": [
@@ -135,7 +137,7 @@
       "dataExport": "applications",
       "carriesNavy": false,
       "tone": "gray",
-      "rhythm": "centered-lead",
+      "rhythm": "uniform",
       "tones": [
         "light",
         "gray"
@@ -143,7 +145,8 @@
       "rhythms": [
         "centered-lead",
         "even",
-        "flow"
+        "flow",
+        "uniform"
       ],
       "exampleHash": "61d1254bd3fc3c58",
       "ctas": [
@@ -185,13 +188,14 @@
       "dataExport": "why",
       "carriesNavy": true,
       "tone": "gray",
-      "rhythm": "overlap",
+      "rhythm": "uniform",
       "tones": [
         "light",
         "gray"
       ],
       "rhythms": [
-        "overlap"
+        "overlap",
+        "uniform"
       ],
       "exampleHash": "24683935274bbad0",
       "ctas": [

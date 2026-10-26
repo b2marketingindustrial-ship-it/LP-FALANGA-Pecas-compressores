@@ -3,8 +3,6 @@
  *
  * 4 cards-botão com foto 4:3 e cabeçalho centrado. O card inteiro é o CTA.
  *
- * Variante local do mockup do cliente (21/10/2026, docs/BRIEFING.md): a seção fecha com
- * uma faixa de CTA (`closing`).
  */
 import type { Photo } from '@data/types'
 
@@ -23,27 +21,23 @@ export interface Application {
 export const applications = {
   eyebrow: 'Aplicações',
   title: 'Reposição para cada parte do compressor',
-  text: 'Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.',
-  /** Faixa azul que fecha a seção, com o CTA `aplicacoes-atendimento`. */
-  closing: {
-    title: 'Não encontrou a sua peça?',
-    text: 'Nossa equipe identifica o item certo para o seu compressor.',
-    cta: 'Solicitar atendimento',
-  },
+  text: 'Peças e lubrificantes para compressores de parafuso e para os componentes que trabalham com eles.',
   items: [
     {
       id: 'compressores-parafuso',
       label: 'Compressores de parafuso',
       description:
-        'Filtros, separadores ar/óleo e óleos LUB Schulz para compressores rotativos de parafuso.',
+        'Filtros, elementos filtrantes e separadores ar/óleo para compressores de parafuso.',
       photo: { src: app1, alt: 'Compressor de parafuso industrial em sala de compressores' },
     },
     {
-      id: 'compressores-pistao',
-      label: 'Compressores de pistão',
-      description:
-        'Válvulas, kits de junta e o óleo MS LUB Schulz para compressores alternativos de pistão.',
-      photo: { src: app2, alt: 'Compressor de pistão com reservatório de ar' },
+      id: 'lubrificacao',
+      label: 'Lubrificação',
+      description: 'Óleos LUB Schulz sintético e mineral para compressores de parafuso.',
+      photo: {
+        src: app2,
+        alt: 'Galão de 20 L do óleo LUB Schulz Sintético 8000 para compressores de parafuso',
+      },
     },
     {
       id: 'reservatorios',
@@ -66,6 +60,5 @@ export const applications = {
   eyebrow: string
   title: string
   text: string
-  closing: { title: string; text: string; cta: string }
   items: readonly [Application, Application, Application, Application]
 }

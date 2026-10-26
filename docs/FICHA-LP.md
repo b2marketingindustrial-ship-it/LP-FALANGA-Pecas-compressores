@@ -19,7 +19,7 @@ site:
     form: '[atendimento_form id="default-form"]'
 
 campanha:
-  mainKeyword: peças para compressor Schulz
+  mainKeyword: peças para compressores
   negatives:
     [
       manutenção,
@@ -107,7 +107,6 @@ conteudo:
     headline: [Peça certa.]
     highlight: [Menos parada, na sua produção.]
     text: Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.
-    area: [Fortaleza e Recife, Atendimento em todo o Nordeste]
     banner: Técnico da Falanga ao lado de um compressor de parafuso Schulz aberto, numa sala com outros compressores
     points:
       - icon: shield
@@ -145,7 +144,7 @@ blocos:
     papeis: [Manutenção, Compras, Revenda]
     eyebrow: Catálogo
     title: Peças para todos os modelos de compressores
-    text: Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.
+    text: Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para compressores de parafuso.
     area: Peças prontas para envio em todo o Nordeste
     closing:
       title: Precisa de uma peça que não está aqui?
@@ -234,21 +233,6 @@ blocos:
         title: "LUB Schulz Mineral 1000 4\u00a0L"
         description: ''
         photo: Galão de 4 L do LUB Schulz Mineral 1000
-      - id: ms-lub-4l
-        group: lubrificantes
-        title: "MS LUB Schulz 4\u00a0L"
-        description: ''
-        photo: Galão de 4 L do MS LUB Schulz
-      - id: ms-lub-1l
-        group: lubrificantes
-        title: "MS LUB Schulz 1\u00a0L"
-        description: ''
-        photo: Frasco de 1 L do MS LUB Schulz
-      - id: motor-oil-schulz
-        group: lubrificantes
-        title: Motor Oil Schulz
-        description: ''
-        photo: Embalagem do Motor Oil Schulz
       - id: desengripante-sd-50
         group: lubrificantes
         title: Desengripante SD 50
@@ -307,20 +291,16 @@ blocos:
     papeis: [Manutenção]
     eyebrow: Aplicações
     title: Reposição para cada parte do compressor
-    text: Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.
-    closing:
-      title: Não encontrou a sua peça?
-      text: Nossa equipe identifica o item certo para o seu compressor.
-      cta: Solicitar atendimento
+    text: Peças e lubrificantes para compressores de parafuso e para os componentes que trabalham com eles.
     items:
       - id: compressores-parafuso
         label: Compressores de parafuso
-        description: Filtros, separadores ar/óleo e óleos LUB Schulz para compressores rotativos de parafuso.
+        description: Filtros, elementos filtrantes e separadores ar/óleo para compressores de parafuso.
         photo: Compressor de parafuso industrial em sala de compressores
-      - id: compressores-pistao
-        label: Compressores de pistão
-        description: Válvulas, kits de junta e o óleo MS LUB Schulz para compressores alternativos de pistão.
-        photo: Compressor de pistão com reservatório de ar
+      - id: lubrificacao
+        label: Lubrificação
+        description: Óleos LUB Schulz sintético e mineral para compressores de parafuso.
+        photo: Galão de 20 L do óleo LUB Schulz Sintético 8000 para compressores de parafuso
       - id: reservatorios
         label: Reservatórios de ar
         description: Válvulas de segurança e de controle de pressão para reservatórios de ar.
@@ -356,7 +336,7 @@ blocos:
         title: Prontas para envio
         description: Peças e lubrificantes prontos para envio.
       - icon: map-pin
-        title: Atendimento no Nordeste
+        title: Todo o Nordeste
         description: Unidades em Fortaleza e Recife atendendo toda a região.
       - icon: users
         title: Equipe especializada
@@ -393,6 +373,7 @@ naoAplicado:
   - campo "Finalidade - para consumo ou revenda" do formulário antigo (configurar no plugin)
   - logo da Kärcher no carrossel de marcas (não é marca de compressor)
   - foto do Motor Oil Schulz da LP antiga (é a embalagem do MS LUB 1 L)
+  - MS LUB Schulz 4 L e 1 L e Motor Oil Schulz (óleos de compressor de pistão; a LP fala só de compressores de parafuso, decisão de 24/10/2026)
   - '"Precisa de um simples produto ou uma grande automação?" (automação não é oferta desta LP)'
 ```
 
@@ -407,11 +388,10 @@ naoAplicado:
 
 ## O que mudou com a LP antiga
 
-- **Fotos reais na vitrine.** 18 dos 19 itens usam a foto da LP antiga, recortada e
+- **Fotos reais na vitrine.** Os 16 itens usam a foto da LP antiga, recortada e
   centrada em 800×600. A foto de "Filtros de Óleo / Separadores de Óleo e Ar" juntava três
   produtos e virou três recortes (filtros de óleo, elementos filtrantes, separadores). O
-  fundo cinza de estúdio do Sintético 8000 4 L foi trocado por branco. Fica pendente só a
-  do **Motor Oil Schulz**: a LP antiga usa ali a embalagem do MS LUB 1 L.
+  fundo cinza de estúdio do Sintético 8000 4 L foi trocado por branco.
 - **Copy da LP antiga.** "Peças para todos os modelos de compressores" (título da
   vitrine), "Não deixe seu compressor parar" e "Garanta a eficiência dos seus compressores"
   (diferenciais), "Solicite uma cotação online agora mesmo" (cotação), "peças originais
@@ -421,8 +401,9 @@ naoAplicado:
   Chicago Pneumatic, do carrossel "Peças para todos os modelos de compressores". A Kärcher
   ficou fora: não é marca de compressor.
 - **Fatos dos rótulos.** A linha LUB Schulz (Sintético 8000, Mineral 4000 e Mineral 1000)
-  é "óleo lubrificante para compressores rotativos de parafuso"; o MS LUB Schulz é "para
-  compressores alternativos de pistão". Isso sustenta as aplicações de parafuso e pistão.
+  é "óleo lubrificante para compressores rotativos de parafuso". Isso sustenta as aplicações
+  de parafuso e de lubrificação. O MS LUB Schulz (compressor de pistão) ficou fora: a LP
+  fala só de compressores de parafuso.
 - **WhatsApp.** O número do botão flutuante da LP antiga (`5585996267979`) liga o botão
   flutuante desta LP.
 - **Público.** O formulário antigo pergunta se a compra é para consumo ou para revenda: o
@@ -432,27 +413,27 @@ naoAplicado:
 
 LP de produto para os grupos ativos de peças e lubrificantes, com a palavra-chave
 `peças para compressor Schulz` no H1 e no title. A composição não mudou: **vitrine**
-(19 itens em duas prateleiras), **identificar**, **aplicacoes** e **diferenciais**.
+(16 itens em duas prateleiras), **identificar**, **aplicacoes** e **diferenciais**.
 
 "Kits de Manutenção", que está na LP antiga, continua fora: `manutenção` é negativa da
 campanha. "Litros" segue como **L** pelo mesmo motivo (`litros`).
 
 ## Viabilidade por fase
 
-| Fase       | Bloco            | Veredicto    | Responde                                  | Papéis                       | O que falta                                                                               |
-| ---------- | ---------------- | ------------ | ----------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
-| Oferta     | `vitrine`        | quase        | peça, lubrificante, lubrificante Schulz   | Manutenção, Compras, Revenda | foto do Motor Oil Schulz; autorização das logos                                           |
-| Oferta     | `linhas`         | insuficiente | —                                         | —                            | famílias com descrição, 3 features e foto recortada                                       |
-| Oferta     | `especificacoes` | insuficiente | —                                         | —                            | modelos, colunas técnicas e valores                                                       |
-| Apoio      | `identificar`    | completo     | peça para compressor                      | Manutenção, Compras          | os 6 dados são **inferidos**; confirmar com o comercial                                   |
-| Apoio      | `processo`       | insuficiente | —                                         | —                            | etapas reais do atendimento                                                               |
-| Apoio      | `situacoes`      | insuficiente | —                                         | —                            | situações de compra reativa                                                               |
-| Prova      | `aplicacoes`     | completo     | peça para compressor, lubrificante Schulz | Manutenção                   | parafuso e pistão vêm dos rótulos; reservatórios e transmissão são **inferidos**; 4 fotos |
-| Prova      | `segmentos`      | insuficiente | —                                         | —                            | 7 setores com equipamentos e fotos                                                        |
-| Prova      | `clientes`       | insuficiente | —                                         | —                            | logos autorizadas e números com fonte                                                     |
-| Autoridade | `diferenciais`   | completo     | peça para compressor, lubrificante        | Compras, Manutenção          | cenário de bancada e pessoa recortada                                                     |
-| Autoridade | `perguntas`      | insuficiente | —                                         | —                            | lista real de dúvidas do comercial                                                        |
-| Autoridade | `escopo`         | insuficiente | —                                         | —                            | argumento de compra consolidada e foto de composição                                      |
+| Fase       | Bloco            | Veredicto    | Responde                                  | Papéis                       | O que falta                                                                                     |
+| ---------- | ---------------- | ------------ | ----------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------- |
+| Oferta     | `vitrine`        | quase        | peça, lubrificante, lubrificante Schulz   | Manutenção, Compras, Revenda | autorização das logos                                                                           |
+| Oferta     | `linhas`         | insuficiente | —                                         | —                            | famílias com descrição, 3 features e foto recortada                                             |
+| Oferta     | `especificacoes` | insuficiente | —                                         | —                            | modelos, colunas técnicas e valores                                                             |
+| Apoio      | `identificar`    | completo     | peça para compressor                      | Manutenção, Compras          | os 6 dados são **inferidos**; confirmar com o comercial                                         |
+| Apoio      | `processo`       | insuficiente | —                                         | —                            | etapas reais do atendimento                                                                     |
+| Apoio      | `situacoes`      | insuficiente | —                                         | —                            | situações de compra reativa                                                                     |
+| Prova      | `aplicacoes`     | completo     | peça para compressor, lubrificante Schulz | Manutenção                   | parafuso e lubrificação vêm dos rótulos; reservatórios e transmissão são **inferidos**; 4 fotos |
+| Prova      | `segmentos`      | insuficiente | —                                         | —                            | 7 setores com equipamentos e fotos                                                              |
+| Prova      | `clientes`       | insuficiente | —                                         | —                            | logos autorizadas e números com fonte                                                           |
+| Autoridade | `diferenciais`   | completo     | peça para compressor, lubrificante        | Compras, Manutenção          | cenário de bancada e pessoa recortada                                                           |
+| Autoridade | `perguntas`      | insuficiente | —                                         | —                            | lista real de dúvidas do comercial                                                              |
+| Autoridade | `escopo`         | insuficiente | —                                         | —                            | argumento de compra consolidada e foto de composição                                            |
 
 Famílias sem bloco que as responda: **unidade compressora** e **especificação de
 lubrificante**. Dentro da família de peças, **mangueira, dreno e válvulas de admissão e
@@ -484,9 +465,8 @@ confirmar com o cliente ou negativar na campanha.
 | O que falta                                         | Quem resolve        | Especificação                                                                                                                         |
 | --------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Banner do hero                                      | designer            | 1981×900, peças e lubrificantes entre 62% e 79% da largura, lado esquerdo escuro, sem texto                                           |
-| Foto do Motor Oil Schulz                            | cliente             | PNG/JPG 800×600 (4:3), fundo branco — entra como `src/assets/vitrine/produto-18.png`                                                  |
 | Fotos da vitrine em alta, com direito de uso        | cliente             | as atuais vieram da LP antiga; algumas parecem ser de anúncios de marketplace                                                         |
-| 4 fotos das aplicações                              | cliente ou designer | 1200×900 (4:3): compressor de parafuso, compressor de pistão, reservatório, transmissão                                               |
+| 4 fotos das aplicações                              | cliente ou designer | 1200×900 (4:3): compressor de parafuso, lubrificação (hoje o galão LUB Schulz), reservatório, transmissão                             |
 | Cenário e pessoa recortada dos diferenciais         | designer            | cenário 1600×900; pessoa de corpo inteiro 1220×1000 com fundo transparente                                                            |
 | Logo no formato do header                           | cliente             | o logo do site (341×82, horizontal) é cortado na placa do header, que pede 240×200: pedir versão empilhada ou aprovar header adaptado |
 | Validar os 6 dados de `identificar`                 | comercial           | confirmar ou corrigir: código, marca, modelo/série, foto, medidas, lubrificante                                                       |
@@ -508,9 +488,9 @@ confirmar com o cliente ou negativar na campanha.
 
 ## Itens excedentes
 
-| Bloco     | Itens que entraram           | Itens guardados                                 |
-| --------- | ---------------------------- | ----------------------------------------------- |
-| `vitrine` | 19 dos 20 itens da LP antiga | Kits de Manutenção — termo negativo da campanha |
+| Bloco     | Itens que entraram           | Itens guardados                                                                                             |
+| --------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `vitrine` | 16 dos 20 itens da LP antiga | Kits de Manutenção (termo negativo da campanha); MS LUB 4 L e 1 L e Motor Oil Schulz (compressor de pistão) |
 
 ## Conteúdo futuro (grupos pausados)
 
@@ -523,5 +503,5 @@ técnica dos lubrificantes.
 ## Dados não usados pelo padrão
 
 Telefones das unidades, e-mail, Instagram e Facebook; menu do site; campo de finalidade do
-formulário antigo; logo da Kärcher; a foto do Motor Oil Schulz da LP antiga (é o MS LUB
-1 L); o convite para automação.
+formulário antigo; logo da Kärcher; MS LUB Schulz e Motor Oil Schulz (compressor de
+pistão); o convite para automação.

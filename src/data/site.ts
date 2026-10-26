@@ -35,11 +35,11 @@ export const shortcodes = {
 } as const
 
 /** Título da aba (ficha: `conteudo.title`). Contém a palavra-chave principal da campanha. */
-export const title = `Peças para compressor Schulz e lubrificantes | ${site.brand}`
+export const title = `Peças para compressores multimarcas | ${site.brand}`
 
 /** Meta description (≤ 160 caracteres). Ajuste o texto, mantendo marcas e o apoio técnico. */
 export const description =
-  'Peças para compressor Schulz, Atlas Copco, Sullair, Ingersoll Rand e outras marcas, e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.'
+  'Peças para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand e outras marcas, e lubrificantes LUB Schulz. Atendimento em todo o Nordeste.'
 
 /**
  * Campanha que leva tráfego para esta LP (entrada 15). Quem clica digitou a
@@ -51,7 +51,7 @@ export const campaign = {
    * estiver no H1 e no title — aceita maiúscula, acento, plural e outra ordem.
    * `null` quando a LP não tem campanha definida; vazio é entrada não preenchida.
    */
-  mainKeyword: 'peças para compressor Schulz',
+  mainKeyword: 'peças para compressores',
   /**
    * Negativas **de oferta** da campanha — o que a empresa não vende. O `check:lp`
    * avisa quando o texto da página usa uma delas. As de intenção (emprego, curso)

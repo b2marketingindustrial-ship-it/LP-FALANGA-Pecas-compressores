@@ -11,7 +11,7 @@ import type { IconName } from './icons'
 import type { Photo } from './types'
 import { site } from './site'
 
-import heroBg from '@assets/heroBg.png'
+import heroBg from '@assets/heroBg.webp'
 
 /* ------------------------------------------------------------------ tipos */
 
@@ -52,19 +52,17 @@ export const hero = {
    * H1 da página, exibido como a linha de abertura acima da manchete (mockup do cliente,
    * 21/10/2026). É o que o check:lp confere contra a palavra-chave da campanha.
    */
-  title: 'Peças para compressor Schulz',
-  /** Manchete visual, uma linha por item: primeiro em branco, depois em amarelo. */
-  headline: ['Peça certa.'],
-  highlight: ['Menos parada', 'na sua produção.'],
-  text: 'Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.',
-  /** Linha de área atendida abaixo do CTA, separada por ponto. */
-  area: ['Fortaleza e Recife', 'Atendimento em todo o Nordeste'],
+  title: 'Peças para compressores multimarcas',
+  /** Manchete em duas linhas: `headline` em branco e `highlight[0]` em amarelo na primeira; o resto de `highlight` na segunda. */
+  headline: ['Sua produção'],
+  highlight: ['não espera.', 'Peça certa, no menor prazo.'],
+  text: 'Filtros, separadores ar/óleo, válvulas, correias e kits de junta para manter seu compressor rodando, com o item certo identificado pela nossa equipe.',
   banner: {
     src: heroBg,
-    alt: 'Técnico da Falanga ao lado de um compressor de parafuso Schulz aberto, numa sala com outros compressores',
+    alt: 'Filtros de ar e de óleo, separadores, correias e lubrificantes LUB Schulz sobre uma bancada, numa sala de compressores',
   },
   points: [
-    { icon: 'shield', line1: 'Peças originais', line2: 'prontas para envio' },
+    { icon: 'truck', line1: 'Prontas', line2: 'para envio' },
     { icon: 'layers', line1: 'Diversos modelos', line2: 'e marcas' },
     { icon: 'droplet', line1: 'Lubrificantes', line2: 'Schulz' },
     { icon: 'users', line1: 'Equipe', line2: 'especializada' },
@@ -74,7 +72,6 @@ export const hero = {
   headline: readonly string[]
   highlight: readonly string[]
   text: string
-  area: readonly string[]
   banner: Photo
   points: readonly [HeroPoint, HeroPoint, HeroPoint, HeroPoint]
 }
@@ -86,7 +83,7 @@ export const quote = {
   title: `Fale com quem entende de ${site.product.toLowerCase()}.`,
   text: 'Solicite uma cotação online agora mesmo: nossa equipe identifica a peça ou o lubrificante certo para o seu compressor. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
   trust: [
-    { icon: 'shield', label: 'Peças originais' },
+    { icon: 'layers', label: 'Peças multimarcas' },
     { icon: 'truck', label: 'Itens prontos para envio' },
     { icon: 'pin', label: 'Atendimento em todo o Nordeste' },
   ],

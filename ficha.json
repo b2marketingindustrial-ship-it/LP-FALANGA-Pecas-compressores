@@ -64,7 +64,7 @@
       "distribuidor oficial",
       "representante oficial"
     ],
-    "mainKeyword": "peças para compressor Schulz",
+    "mainKeyword": "peças para compressores",
     "areaAtendida": "Nordeste, com unidades em Fortaleza/CE e Recife/PE",
     "onde": "selo",
     "familias": [
@@ -123,16 +123,17 @@
     "Revenda"
   ],
   "marcas": {
-    "usarLogos": false,
+    "usarLogos": true,
     "nomes": [
       "Schulz",
       "Atlas Copco",
       "Sullair",
       "Ingersoll Rand",
       "Wayne",
-      "Chicago Pneumatic"
+      "Chicago Pneumatic",
+      "Kärcher"
     ],
-    "autorizacao": "o site atual mostra as logos num carrossel; na LP, só por extenso até o cliente registrar a autorização"
+    "autorizacao": "logos enviadas pelo cliente em 24/10/2026 para o carrossel da vitrine; a LP deixa claro que o fornecimento é multimarcas"
   },
   "tokens": {
     "padrao": true
@@ -149,11 +150,7 @@
         "Menos parada",
         "na sua produção."
       ],
-      "text": "Peças originais para diversos modelos e marcas, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.",
-      "area": [
-        "Fortaleza e Recife",
-        "Atendimento em todo o Nordeste"
-      ],
+      "text": "Fornecimento multimarcas de peças originais para compressores, prontas para envio, e lubrificantes Schulz, com equipe especializada para identificar o item certo.",
       "banner": "Técnico da Falanga ao lado de um compressor de parafuso Schulz aberto, numa sala com outros compressores",
       "points": [
         {
@@ -208,9 +205,9 @@
       "dataExport": "showcase",
       "data": "vitrine.ts",
       "conteudo": {
-        "eyebrow": "Catálogo",
+        "eyebrow": "Catálogo multimarcas",
         "title": "Peças para todos os modelos de compressores",
-        "text": "Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.",
+        "text": "Fornecimento multimarcas: peças para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Chicago Pneumatic, Wayne e outras marcas, e lubrificantes Schulz.",
         "area": "Peças prontas para envio em todo o Nordeste",
         "closing": {
           "title": "Precisa de uma peça que não está aqui?",
@@ -336,27 +333,6 @@
             "photo": "Galão de 4 L do LUB Schulz Mineral 1000"
           },
           {
-            "id": "ms-lub-4l",
-            "group": "lubrificantes",
-            "title": "MS LUB Schulz 4 L",
-            "description": "",
-            "photo": "Galão de 4 L do MS LUB Schulz"
-          },
-          {
-            "id": "ms-lub-1l",
-            "group": "lubrificantes",
-            "title": "MS LUB Schulz 1 L",
-            "description": "",
-            "photo": "Frasco de 1 L do MS LUB Schulz"
-          },
-          {
-            "id": "motor-oil-schulz",
-            "group": "lubrificantes",
-            "title": "Motor Oil Schulz",
-            "description": "",
-            "photo": "Embalagem do Motor Oil Schulz"
-          },
-          {
             "id": "desengripante-sd-50",
             "group": "lubrificantes",
             "title": "Desengripante SD 50",
@@ -416,24 +392,19 @@
       "conteudo": {
         "eyebrow": "Aplicações",
         "title": "Reposição para cada parte do compressor",
-        "text": "Peças e lubrificantes para compressores rotativos de parafuso e alternativos de pistão e para os componentes que trabalham com eles.",
-        "closing": {
-          "title": "Não encontrou a sua peça?",
-          "text": "Nossa equipe identifica o item certo para o seu compressor.",
-          "cta": "Solicitar atendimento"
-        },
+        "text": "Peças e lubrificantes para compressores de parafuso e para os componentes que trabalham com eles.",
         "items": [
           {
             "id": "compressores-parafuso",
             "label": "Compressores de parafuso",
-            "description": "Filtros, separadores ar/óleo e óleos LUB Schulz para compressores rotativos de parafuso.",
+            "description": "Filtros, elementos filtrantes e separadores ar/óleo para compressores de parafuso.",
             "photo": "Compressor de parafuso industrial em sala de compressores"
           },
           {
-            "id": "compressores-pistao",
-            "label": "Compressores de pistão",
-            "description": "Válvulas, kits de junta e o óleo MS LUB Schulz para compressores alternativos de pistão.",
-            "photo": "Compressor de pistão com reservatório de ar"
+            "id": "lubrificacao",
+            "label": "Lubrificação",
+            "description": "Óleos LUB Schulz sintético e mineral para compressores de parafuso.",
+            "photo": "Galão de 20 L do óleo LUB Schulz Sintético 8000 para compressores de parafuso"
           },
           {
             "id": "reservatorios",
@@ -476,7 +447,7 @@
           },
           {
             "icon": "map-pin",
-            "title": "Atendimento no Nordeste",
+            "title": "Todo o Nordeste",
             "description": "Unidades em Fortaleza e Recife atendendo toda a região."
           },
           {

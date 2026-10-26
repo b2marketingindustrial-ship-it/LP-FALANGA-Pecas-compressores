@@ -200,15 +200,15 @@ for (const f of astroFiles) {
       'header-logo',
       'data-cta="header-cta"',
     ],
-    // Mesmo desvio: a foto vai do fim da coluna de texto até a borda da tela, e o
-    // shortcode do chat fica num card branco que encosta na margem. O grid de três
-    // colunas e a coluna de 300px do shortcode continuam os do padrão.
+    // Mesmo desvio, repinado em 23/10/2026 com a linguagem da LP de compressores de
+    // parafuso (docs/BRIEFING.md): conteúdo até --container-page (1450px), coluna de texto
+    // de largura fixa, janela do banner com o resto e shortcode do chat de 340px, sem card.
     'Hero.astro': [
-      'grid-template-columns: minmax(0, 1fr) 270px 300px',
-      'left: calc(var(--col-end) - 100px)',
+      'grid-template-columns: minmax(0, var(--text-col)) minmax(0, 1fr) 340px',
+      'left: calc(var(--col-end) - var(--photo-pull) - var(--photo-bleed))',
       'hero-chat',
       '<slot name="shortcode">',
-      'lg:w-[300px]',
+      'lg:w-[340px]',
       'data-hero-grid',
       'fetchpriority="high"',
     ],

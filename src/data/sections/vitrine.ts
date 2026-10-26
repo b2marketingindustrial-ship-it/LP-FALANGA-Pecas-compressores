@@ -8,17 +8,18 @@
  * prateleira própria, com a logo (ou o nome) no cabeçalho.
  *
  * Variante local do mockup do cliente (21/10/2026, docs/BRIEFING.md): cabeçalho com o
- * traço amarelo e a área atendida (`area`), e faixa de CTA fechando a seção (`closing`).
+ * traço amarelo (a área atendida saiu em 26/10/2026). A faixa de CTA que fechava a seção saiu em
+ * 26/10/2026: a mensagem foi para o painel de identificação (`identificar.ts`).
  *
  * Fotos da LP antiga da Falanga (falangapneumatica.com.br/pecas-para-compressores/),
- * recortadas e centradas em 800×600. `produto-18.png` (Motor Oil Schulz) veio do cliente
- * em 22/10/2026: frasco de 1 L com o detalhe do óleo entrando no cabeçote.
+ * recortadas e centradas em 800×600. Itens e ordem conforme a lista do cliente (26/10/2026):
+ * 8 peças, com dois cards de nome duplo, e 10 lubrificantes (voltaram o MS LUB e o Motor Oil).
+ * As 8 fotos das peças foram enviadas pelo cliente na mesma data, recortadas e centradas
+ * em 800×600. A dos kits de manutenção veio com 249px de largura e perde nitidez.
  */
 import type { Photo } from '@data/types'
 
 import produto1 from '@assets/vitrine/produto-1.png'
-import produto2 from '@assets/vitrine/produto-2.png'
-import produto3 from '@assets/vitrine/produto-3.png'
 import produto4 from '@assets/vitrine/produto-4.png'
 import produto5 from '@assets/vitrine/produto-5.png'
 import produto6 from '@assets/vitrine/produto-6.png'
@@ -35,6 +36,7 @@ import produto16 from '@assets/vitrine/produto-16.png'
 import produto17 from '@assets/vitrine/produto-17.png'
 import produto18 from '@assets/vitrine/produto-18.png'
 import produto19 from '@assets/vitrine/produto-19.png'
+import produto20 from '@assets/vitrine/produto-20.png'
 
 /** Marca, linha ou família. `logo` é opcional: sem ela, vale o nome. */
 export interface ShowcaseGroup {
@@ -54,54 +56,38 @@ export interface ShowcaseItem {
 }
 
 export const showcase = {
-  eyebrow: 'Catálogo',
-  title: 'Peças para todos os modelos de compressores',
-  text: 'Itens para compressores Schulz, Atlas Copco, Sullair, Ingersoll Rand, Wayne, Chicago Pneumatic e outras marcas, e lubrificantes Schulz para parafuso e pistão.',
-  /** Linha de área atendida sob o cabeçalho, com o pino (mockup do cliente, 21/10/2026). */
-  area: 'Peças prontas para envio em todo o Nordeste',
-  /** Faixa que fecha a seção, com o CTA `vitrine-cotacao`. */
-  closing: {
-    title: 'Precisa de uma peça que não está aqui?',
-    text: 'Trabalhamos com itens para diversos modelos e marcas de compressores.',
-    cta: 'Solicitar cotação',
-  },
+  eyebrow: 'Catálogo multimarcas',
+  title: 'Do filtro ao lubrificante, em um só fornecedor',
+  text: 'Reposição para Schulz, Atlas Copco, Sullair, Ingersoll Rand, Chicago Pneumatic, Wayne e outras marcas, mais os lubrificantes Schulz.',
+  /** Rodapé do card de logos: `brandsNoteLead` em destaque, `brandsNote` em seguida. */
+  brandsNoteLead: 'Não viu a sua marca?',
+  brandsNote: 'Atendemos outras também: fale com a equipe.',
   groups: [
     { id: 'pecas', label: 'Peças de reposição', logo: null },
     { id: 'lubrificantes', label: 'Lubrificantes Schulz', logo: null },
   ],
   items: [
     {
-      id: 'filtros-de-ar',
+      id: 'acoplamentos',
       group: 'pecas',
-      title: 'Filtros de ar',
+      title: 'Acoplamentos',
       description: '',
-      photo: { src: produto1, alt: 'Filtros de ar de diversos formatos para compressor' },
+      photo: { src: produto7, alt: 'Acoplamentos e elementos elásticos de diversos modelos' },
     },
     {
-      id: 'filtros-de-oleo',
+      id: 'filtros-de-oleo-separadores',
       group: 'pecas',
-      title: 'Filtros de óleo',
+      title: 'Filtros de óleo e separadores ar/óleo',
       description: '',
-      photo: { src: produto2, alt: 'Dois filtros de óleo rosqueáveis para compressor' },
+      photo: {
+        src: produto4,
+        alt: 'Filtros de óleo rosqueáveis e separadores ar/óleo de diversos formatos',
+      },
     },
     {
-      id: 'elementos-filtrantes',
+      id: 'elementos-filtrantes-valvulas-de-seguranca',
       group: 'pecas',
-      title: 'Elementos filtrantes',
-      description: '',
-      photo: { src: produto3, alt: 'Elementos filtrantes com tampas metálicas' },
-    },
-    {
-      id: 'separadores-ar-oleo',
-      group: 'pecas',
-      title: 'Separadores ar/óleo',
-      description: '',
-      photo: { src: produto4, alt: 'Separadores ar/óleo com flange para compressor de parafuso' },
-    },
-    {
-      id: 'valvulas-de-seguranca',
-      group: 'pecas',
-      title: 'Válvulas de segurança',
+      title: 'Elementos filtrantes e válvulas de segurança',
       description: '',
       photo: { src: produto5, alt: 'Válvula de segurança em latão com argola de acionamento' },
     },
@@ -111,13 +97,6 @@ export const showcase = {
       title: 'Válvulas de controle de pressão',
       description: '',
       photo: { src: produto6, alt: 'Pressostato com manômetros para controle de pressão' },
-    },
-    {
-      id: 'acoplamentos',
-      group: 'pecas',
-      title: 'Acoplamentos',
-      description: '',
-      photo: { src: produto7, alt: 'Acoplamentos e elementos elásticos de diversos modelos' },
     },
     {
       id: 'correias-de-transmissao',
@@ -132,6 +111,23 @@ export const showcase = {
       title: 'Kits de junta',
       description: '',
       photo: { src: produto9, alt: 'Juntas e anéis de vedação de um kit de juntas' },
+    },
+    {
+      id: 'filtros-de-ar',
+      group: 'pecas',
+      title: 'Filtros de ar',
+      description: '',
+      photo: { src: produto1, alt: 'Elementos de filtro de ar de diversos formatos e tamanhos' },
+    },
+    {
+      id: 'kits-de-manutencao',
+      group: 'pecas',
+      title: 'Kits de manutenção',
+      description: '',
+      photo: {
+        src: produto20,
+        alt: 'Kit com filtro de ar, filtros de óleo, elemento filtrante e galão de óleo',
+      },
     },
     {
       id: 'lub-sintetico-8000-20l',
@@ -162,34 +158,6 @@ export const showcase = {
       photo: { src: produto13, alt: 'Galão de 4 L do LUB Schulz Mineral 4000' },
     },
     {
-      id: 'lub-mineral-1000-20l',
-      group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 1000 20\u00a0L',
-      description: '',
-      photo: { src: produto14, alt: 'Galão de 20 L do LUB Schulz Mineral 1000' },
-    },
-    {
-      id: 'lub-mineral-1000-4l',
-      group: 'lubrificantes',
-      title: 'LUB Schulz Mineral 1000 4\u00a0L',
-      description: '',
-      photo: { src: produto15, alt: 'Galão de 4 L do LUB Schulz Mineral 1000' },
-    },
-    {
-      id: 'ms-lub-4l',
-      group: 'lubrificantes',
-      title: 'MS LUB Schulz 4\u00a0L',
-      description: '',
-      photo: { src: produto16, alt: 'Galão de 4 L do MS LUB Schulz' },
-    },
-    {
-      id: 'ms-lub-1l',
-      group: 'lubrificantes',
-      title: 'MS LUB Schulz 1\u00a0L',
-      description: '',
-      photo: { src: produto17, alt: 'Frasco de 1 L do MS LUB Schulz' },
-    },
-    {
       id: 'motor-oil-schulz',
       group: 'lubrificantes',
       title: 'Motor Oil Schulz',
@@ -200,19 +168,47 @@ export const showcase = {
       },
     },
     {
+      id: 'lub-mineral-1000-4l',
+      group: 'lubrificantes',
+      title: 'LUB Schulz Mineral 1000 4\u00a0L',
+      description: '',
+      photo: { src: produto15, alt: 'Galão de 4 L do LUB Schulz Mineral 1000' },
+    },
+    {
+      id: 'lub-mineral-1000-20l',
+      group: 'lubrificantes',
+      title: 'LUB Schulz Mineral 1000 20\u00a0L',
+      description: '',
+      photo: { src: produto14, alt: 'Galão de 20 L do LUB Schulz Mineral 1000' },
+    },
+    {
+      id: 'ms-lub-schulz-4l',
+      group: 'lubrificantes',
+      title: 'MS LUB Schulz 4\u00a0L',
+      description: '',
+      photo: { src: produto16, alt: 'Galão de 4 L do MS LUB Schulz' },
+    },
+    {
       id: 'desengripante-sd-50',
       group: 'lubrificantes',
       title: 'Desengripante SD 50',
       description: '',
       photo: { src: produto19, alt: 'Spray desengripante SD 50 Schulz' },
     },
+    {
+      id: 'ms-lub-schulz-1l',
+      group: 'lubrificantes',
+      title: 'MS LUB Schulz 1\u00a0L',
+      description: '',
+      photo: { src: produto17, alt: 'Frasco de 1 L do MS LUB Schulz' },
+    },
   ],
 } as const satisfies {
   eyebrow: string
   title: string
   text: string
-  area: string
-  closing: { title: string; text: string; cta: string }
+  brandsNoteLead: string
+  brandsNote: string
   groups: readonly ShowcaseGroup[]
   items: readonly ShowcaseItem[]
 }

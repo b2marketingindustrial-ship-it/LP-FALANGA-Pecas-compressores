@@ -18,10 +18,12 @@ export interface SupportItem {
 
 export const supportPanel = {
   eyebrow: 'Apoio na identificação',
-  title: 'Precisa identificar a peça certa?',
+  title: 'Não achou a sua peça? A equipe identifica para você.',
   /** Trecho final de `title` que vai em amarelo, em linha própria. */
-  highlight: 'a peça certa?',
-  text: 'Não precisa ter todos os dados em mãos. Envie o que você tiver e nossa equipe identifica a peça ou o lubrificante certo para o seu compressor.',
+  highlight: 'A equipe identifica para você.',
+  text: 'Atendemos diversos modelos e marcas de compressores. Mesmo sem todos os dados, indicamos a peça ou o lubrificante certo.',
+  /** Rótulo da lista de dados. */
+  itemsLabel: 'Envie o que tiver em mãos',
   microcopy: 'Retorno da equipe especializada',
   /** Rótulo do botão da seção. */
   cta: 'Identifique sua peça',
@@ -38,6 +40,7 @@ export const supportPanel = {
   title: string
   highlight: string
   text: string
+  itemsLabel: string
   microcopy: string
   cta: string
   items: readonly [SupportItem, SupportItem, SupportItem, SupportItem, SupportItem, SupportItem]
